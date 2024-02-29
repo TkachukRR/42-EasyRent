@@ -1,0 +1,54 @@
+body {
+  color: $text-color-primary;
+
+  font-family: 'Source Sans Pro';
+  font-size: $font-size-m;
+  font-weight: $font-weight-regular;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: currentColor;
+  cursor: pointer;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
