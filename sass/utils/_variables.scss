@@ -1,6 +1,23 @@
+$bg-color-primary: #f4f5fb;
+$bg-color-secondary: #24242c;
+$bg-color-tertiary: #ffffff;
+$bg-color-quaternary: #fafafa;
+
+$bg-color-accent-light: #f9f7ff;
+$bg-color-accent-dark: #6f6dff;
+
+//
+
+$font-family-primary: 'Source Sans Pro';
+$font-family-logo: 'Leckerli One';
+
+//
+
 $font-weight-regular: 400;
 $font-weight-semi: 600;
 $font-weight-bold: 700;
+
+//
 
 $font-size-xs: 14px;
 $font-size-s: 16px;
@@ -11,6 +28,11 @@ $font-size-xxl: 32px;
 $font-size-xxxl: 40px;
 $font-size-xxxxl: 48px;
 
+$font-size-logo-header: 40px;
+$font-size-logo-footer: 56px;
+
+//
+
 $line-height-xs: 20px;
 $line-height-s: 24px;
 $line-height-m: 32px;
@@ -19,9 +41,15 @@ $line-height-xl: 48px;
 $line-height-xxl: 56px;
 $line-height-xxxl: 64px;
 
+$line-height-logo: 54px;
+
+//
+
 $letter-spacing-s: 0.28px;
 $letter-spacing-m: 0.32px;
 $letter-spacing-l: 0.4px;
+
+//
 
 $text-color-primary: #363644;
 $text-color-secondary: #24242c;
@@ -40,3 +68,7 @@ $text-color-blue-gray-500: #82829b;
 $text-color-blue-gray-600: #6d6d88;
 $text-color-blue-gray-700: #49495b;
 $text-color-blue-gray-800: #202028;
+
+//
+
+$text-color-logo-header: #f6f6f6;

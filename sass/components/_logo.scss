@@ -1,0 +1,22 @@
+%logo {
+  font-family: $font-family-logo;
+
+  &--header {
+    padding: 5px 8px;
+
+    color: $text-color-logo-header;
+    font-size: $font-size-xl;
+    line-height: $line-height-m;
+
+    @media screen and (min-width: $tablet) {
+      font-size: $font-size-logo-header;
+      line-height: $line-height-logo;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $text-color-white;
+    }
+  }
+}

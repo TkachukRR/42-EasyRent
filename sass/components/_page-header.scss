@@ -1,0 +1,27 @@
+.header {
+  padding: 8px 0;
+
+  background-color: $bg-color-secondary;
+  font-size: $font-size-m;
+  line-height: $line-height-m;
+
+  @media screen and (min-width: $tablet) {
+    font-size: $font-size-l;
+    line-height: $line-height-m;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    @extend %logo;
+    @extend %logo--header;
+  }
+
+  .navigation {
+    @extend %navigation;
+  }
+}
