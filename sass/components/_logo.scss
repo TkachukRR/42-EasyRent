@@ -1,5 +1,12 @@
 %logo {
   font-family: $font-family-logo;
+  transition: $color-transition-primary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $text-color-blue-gray-500;
+  }
 
   &--header {
     padding: 5px 8px;
@@ -12,11 +19,16 @@
       font-size: $font-size-logo-header;
       line-height: $line-height-logo;
     }
+  }
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: $text-color-white;
+  &--footer {
+    color: $text-color-white;
+    align-self: center;
+
+    @media screen and (min-width: $tablet) {
+      font-size: $font-size-logo-footer;
+      line-height: $line-height-logo;
+      align-self: flex-end;
     }
   }
 }

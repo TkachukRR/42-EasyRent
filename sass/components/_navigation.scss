@@ -10,11 +10,12 @@
     align-items: center;
     color: $text-color-btn-header;
     text-transform: capitalize;
+    transition: $color-transition-primary;
 
     &:hover,
     &:active,
     &:focus {
-      color: $text-color-white;
+      color: $text-color-blue-gray-500;
     }
   }
 }

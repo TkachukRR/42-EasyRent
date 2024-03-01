@@ -81,8 +81,12 @@ svg {
   }
 }
 
-.header .logo {
+.footer .logo, .header .logo {
   font-family: "Leckerli One";
+  transition: color 0.3s ease-out, top 0.3s;
+}
+.footer .logo:hover, .header .logo:hover, .footer .logo:active, .header .logo:active, .footer .logo:focus, .header .logo:focus {
+  color: #82829b;
 }
 .header .logo {
   padding: 5px 8px;
@@ -96,8 +100,16 @@ svg {
     line-height: 54px;
   }
 }
-.header .logo:hover, .header .logo:active, .header .logo:focus {
+.footer .logo {
   color: #fff;
+  align-self: center;
+}
+@media screen and (min-width: 768px) {
+  .footer .logo {
+    font-size: 56px;
+    line-height: 54px;
+    align-self: flex-end;
+  }
 }
 
 .header .navigation {
@@ -112,8 +124,67 @@ svg {
   align-items: center;
   color: #f3f2f2;
   text-transform: capitalize;
+  transition: color 0.3s ease-out, top 0.3s;
 }
 .header .navigation .btn:hover, .header .navigation .btn:active, .header .navigation .btn:focus {
+  color: #82829b;
+}
+
+.navi {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media screen and (min-width: 768px) {
+  .navi {
+    flex-direction: row;
+    gap: 28px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .navi {
+    gap: 56px;
+    font-size: 24px;
+  }
+}
+.navi__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+  .navi__item {
+    gap: 12px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .navi__item {
+    gap: 24px;
+  }
+}
+.navi__item .title {
+  color: #e6e6e6;
+}
+.navi__item .list {
+  display: flex;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .navi__item .list {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .navi__item .list {
+    gap: 24px;
+  }
+}
+.navi__item .list .link {
+  transition: color 0.3s ease-out, top 0.3s;
+}
+.navi__item .list .link:hover, .navi__item .list .link:active, .navi__item .list .link:focus {
   color: #fff;
 }
 
@@ -136,4 +207,32 @@ svg {
 }
 .main {
   flex: 1;
+}
+
+.footer {
+  background-color: #24242c;
+  color: #82829b;
+  padding: 24px 0;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer {
+    padding: 88px 0;
+  }
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+  }
 }/*# sourceMappingURL=home.css.map */

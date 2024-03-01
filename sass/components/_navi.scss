@@ -1,0 +1,58 @@
+.navi {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    gap: 28px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 56px;
+    font-size: $font-size-l;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-transform: capitalize;
+
+    @media screen and (min-width: $tablet) {
+      gap: 12px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      gap: 24px;
+    }
+
+    .title {
+      color: $text-color-grey-200;
+    }
+
+    .list {
+      display: flex;
+      gap: 24px;
+
+      @media screen and (min-width: $tablet) {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        gap: 24px;
+      }
+
+      .link {
+        transition: $color-transition-primary;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $text-color-white;
+        }
+      }
+    }
+  }
+}
