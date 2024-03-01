@@ -1,4 +1,12 @@
+html {
+  display: flex;
+  min-height: 100%;
+}
+
 body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   color: #363644;
   font-family: "Source Sans Pro";
   font-size: 20px;
@@ -125,4 +133,7 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.main {
+  flex: 1;
 }/*# sourceMappingURL=home.css.map */
