@@ -521,7 +521,7 @@ svg {
   max-width: 100%;
   display: flex;
   gap: 16px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .frequently-typed .list::before {
   content: "";
@@ -541,6 +541,51 @@ svg {
   color: #3145af;
   font-size: 24px;
   line-height: 40px;
+}
+
+.popular-sports .slider {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 32px 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.popular-sports .slider .slider__item {
+  flex-shrink: 0;
+}
+.popular-sports .slider .sport {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.popular-sports .slider .sport__img {
+  position: relative;
+}
+.popular-sports .slider .sport__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  z-index: 2;
+  white-space: nowrap;
+}
+.popular-sports .slider .sport::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(32, 32, 37, 0.6);
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .footer {

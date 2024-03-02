@@ -6,7 +6,7 @@
     max-width: 100%;
     display: flex;
     gap: 16px;
-    overflow: hidden;
+    overflow-x: hidden;
 
     &::before {
       content: '';
