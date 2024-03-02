@@ -1,0 +1,218 @@
+.header btn {
+  color: $text-color-btn;
+  font-size: $font-size-l;
+  line-height: $line-height-m;
+}
+
+.hero {
+  color: $text-color-blue-300;
+  font-size: $font-size-xxxxl;
+  line-height: $line-height-xxxl;
+}
+
+.hero .banner-1 {
+  color: $text-color-blue-200;
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-m;
+}
+
+.hero .banner-2 {
+  color: $text-color-blue-200;
+  font-size: $font-size-l;
+  line-height: $line-height-m;
+}
+
+.search {
+  color: $text-color-primary;
+  font-size: $font-size-m;
+  line-height: $line-height-l;
+}
+
+.search .btn {
+  color: $text-color-btn;
+  font-size: $font-size-l;
+  font-weight: $font-weight-semi;
+  line-height: $line-height-m;
+}
+
+.cards__list .title {
+  font-size: $font-size-xxxl;
+  font-weight: $font-weight-semi;
+  line-height: $line-height-xxxl;
+  font-variant: all-small-caps;
+  letter-spacing: $letter-spacing-l;
+
+  background: linear-gradient(90deg, #364ea3 0%, #785ee9 104.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card .title {
+  color: $text-color-tertiary;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semi;
+  line-height: $line-height-l;
+}
+
+.card .text {
+  color: $text-color-blue-gray-600;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+}
+
+.top-search .title {
+  color: $text-color-primary;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-xxl;
+}
+
+.top-search .btn {
+  color: $text-color-btn-top-search;
+  font-size: $font-size-l;
+  line-height: $line-height-l;
+}
+
+.popular-sports .title {
+  color: $text-color-primary;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-xxl;
+}
+
+.popular-sports .item {
+  color: $text-color-white;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-semi;
+  line-height: $line-height-l;
+}
+
+.promo .title {
+  color: $text-color-blue-400;
+  font-size: $font-size-xxxl;
+  font-weight: $font-weight-semi;
+  line-height: $line-height-xl;
+}
+
+.promo .text {
+  color: $text-color-primary;
+  font-size: $font-size-xxl;
+  line-height: $line-height-l;
+}
+
+.footer .title {
+  color: $text-color-grey-200;
+  font-size: $font-size-l;
+  font-weight: $font-weight-semi;
+  line-height: $line-height-m;
+}
+
+.footer .text {
+  color: $text-color-blue-gray-500;
+  font-size: $font-size-l;
+  line-height: $line-height-m;
+}
+
+/* ========================= */
+
+.side-bar .list__title {
+  color: $text-color-primary;
+  font-size: $font-size-l;
+  font-weight: $font-weight-semi;
+  line-height: $line-height-m;
+}
+
+.side-bar .list__item {
+  color: $text-color-primary;
+  font-size: $font-size-m;
+  line-height: $line-height-m;
+}
+
+.side-bar .list__item .postfix {
+  color: $text-color-secondary;
+  font-size: $font-size-m;
+  line-height: $line-height-m;
+}
+
+.side-bar .list__item--selected {
+  color: $text-color-secondary;
+  font-size: $font-size-m;
+  font-weight: $font-weight-semi;
+  line-height: $line-height-m;
+}
+
+.searching-result {
+  .info {
+    color: $text-color-blue-gray-500;
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
+    letter-spacing: $letter-spacing-s;
+  }
+
+  .result {
+    color: $text-color-blue-gray-700;
+    font-size: $font-size-s;
+    font-weight: $font-weight-semi;
+    line-height: $line-height-s;
+    letter-spacing: $letter-spacing-m;
+  }
+}
+
+.product {
+  .title {
+    color: $text-color-secondary;
+    font-size: $font-size-m;
+    font-weight: $font-weight-semi;
+    line-height: $line-height-m;
+  }
+
+  .ability {
+    color: $text-color-secondary;
+    font-size: $font-size-m;
+    font-weight: $font-weight-semi;
+    line-height: $line-height-m;
+  }
+
+  .ability__date {
+    color: $text-color-blue-gray-800;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    letter-spacing: $letter-spacing-m;
+  }
+
+  .location {
+    color: $text-color-primary;
+    font-size: $font-size-s;
+    line-height: $line-height-xs;
+  }
+
+  .recommendation {
+    color: $text-color-primary;
+    font-size: $font-size-s;
+    line-height: $line-height-xs;
+    letter-spacing: $letter-spacing-m;
+  }
+
+  .rate {
+    color: $text-color-tertiary;
+    font-size: $font-size-s;
+    font-weight: $font-weight-semi;
+    line-height: $line-height-xs;
+  }
+
+  .link {
+    color: $text-color-blue-400;
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
+    letter-spacing: $letter-spacing-s;
+  }
+
+  .btn {
+    color: $text-color-btn;
+    font-size: $font-size-s;
+    font-weight: $font-weight-semi
+    line-height: $line-height-m;
+  }
+}
