@@ -73,7 +73,7 @@ svg {
     padding: 0 40px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .container {
     padding: 0 60px;
     max-width: 1440px;
@@ -140,7 +140,7 @@ svg {
     gap: 28px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .navi {
     gap: 56px;
     font-size: 24px;
@@ -157,7 +157,7 @@ svg {
     gap: 12px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .navi__item {
     gap: 24px;
   }
@@ -175,7 +175,7 @@ svg {
     gap: 12px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .navi__item .list {
     gap: 24px;
   }
@@ -213,7 +213,7 @@ svg {
   position: relative;
   padding: 16px 8px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .hero {
     padding-right: 8px;
     padding-left: 8px;
@@ -223,7 +223,7 @@ svg {
     padding: 16px 60px;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1024px) {
   .hero .company {
     position: absolute;
     top: 50%;
@@ -239,7 +239,7 @@ svg {
     gap: 12px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .hero .company {
     max-width: 768px;
   }
@@ -248,14 +248,14 @@ svg {
   color: #4b66c3;
   font-size: 24px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .hero .company__slogan {
     margin-bottom: 32px;
     font-size: 48px;
     line-height: 64px;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1024px) {
   .hero .company__slogan {
     padding: 8px 16px;
     position: relative;
@@ -303,7 +303,7 @@ svg {
   border-radius: 16px;
   z-index: -1;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .hero .company__statistic {
     padding: 16px 24px;
     font-size: 24px;
@@ -353,7 +353,7 @@ svg {
     padding: 40px 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .search {
     padding: 80px 0;
   }
@@ -366,7 +366,7 @@ svg {
   max-width: 480px;
   margin: 0 auto;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .search .form-search {
     max-width: none;
   }
@@ -376,7 +376,7 @@ svg {
   display: flex;
   gap: 24px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .search .wrapper {
     flex-grow: 0;
   }
@@ -391,7 +391,7 @@ svg {
   background: #fafafa;
   box-shadow: 0px 3px 8px 0px rgba(36, 36, 44, 0.03);
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .search .input {
     flex-grow: 0;
   }
@@ -430,6 +430,60 @@ svg {
   box-shadow: 0px 4px 16px 0px rgba(36, 36, 44, 0.2);
 }
 
+.instruction .title {
+  padding: 48px 0 16px;
+  margin-bottom: 8px;
+  text-align: center;
+  background: linear-gradient(90deg, #364ea3 0%, #785ee9 104.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.instruction .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 32px 0;
+}
+@media screen and (min-width: 1024px) {
+  .instruction .list {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+.instruction .card {
+  max-width: 413px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 2px 18px 0px rgba(107, 125, 219, 0.12);
+  text-align: center;
+}
+.instruction .card__icon {
+  margin-bottom: 24px;
+}
+.instruction .card__title {
+  color: #1d2a58;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  margin-bottom: 8px;
+}
+.instruction .card__text {
+  color: #6d6d88;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 36px;
+  min-height: 120px;
+}
+
 .footer {
   background-color: #24242c;
   color: #82829b;
@@ -440,7 +494,7 @@ svg {
     padding: 40px 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .footer {
     padding: 88px 0;
   }
