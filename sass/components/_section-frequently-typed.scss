@@ -1,0 +1,40 @@
+.frequently-typed {
+  .list {
+    position: relative;
+
+    padding: 24px 0;
+    max-width: 100%;
+    display: flex;
+    gap: 16px;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      height: 100px;
+      width: 104px;
+
+      background: linear-gradient(
+        270deg,
+        #fff 2.72%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    &__item {
+      .btn {
+        border-radius: 32px;
+        background: $bg-color-accent-light;
+        padding: 16px 24px;
+        white-space: nowrap;
+
+        color: $text-color-btn-top-search;
+        font-size: $font-size-l;
+        line-height: $line-height-l;
+      }
+    }
+  }
+}

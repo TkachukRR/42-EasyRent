@@ -11,6 +11,8 @@ body {
   font-family: "Source Sans Pro";
   font-size: 20px;
   font-weight: 400;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 *,
@@ -62,6 +64,50 @@ ul {
 
 svg {
   fill: currentColor;
+}
+
+.section {
+  padding-top: 8px;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    padding-top: 24px;
+  }
+}
+.section__title {
+  padding: 12px 8px 8px;
+  color: #363644;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 56px;
+}
+@media screen and (min-width: 768px) {
+  .section__title {
+    padding: 24px 8px 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section__title {
+    padding: 48px 8px 16px;
+  }
+}
+
+.scrollbar--hidden::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0;
+  height: 0;
+}
+.scrollbar--hidden::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.scrollbar--hidden::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .container {
@@ -363,23 +409,13 @@ svg {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
-  max-width: 480px;
+  max-width: 923px;
   margin: 0 auto;
-}
-@media screen and (min-width: 1024px) {
-  .search .form-search {
-    max-width: none;
-  }
 }
 .search .wrapper {
   flex-grow: 1;
   display: flex;
   gap: 24px;
-}
-@media screen and (min-width: 1024px) {
-  .search .wrapper {
-    flex-grow: 0;
-  }
 }
 .search .input {
   flex-grow: 1;
@@ -391,15 +427,10 @@ svg {
   background: #fafafa;
   box-shadow: 0px 3px 8px 0px rgba(36, 36, 44, 0.03);
 }
-@media screen and (min-width: 1024px) {
-  .search .input {
-    flex-grow: 0;
-  }
-}
 .search .input input {
   border: none;
   background-color: transparent;
-  width: 370px;
+  width: 100%;
 }
 .search .input input:focus-visible {
   outline: none;
@@ -411,7 +442,7 @@ svg {
 }
 .search .select {
   appearance: none;
-  width: 325px;
+  flex: 1;
   padding: 16px;
   border-radius: 8px;
   border: 1px solid #e4e8f6;
@@ -482,6 +513,34 @@ svg {
   line-height: 24px;
   padding: 0 36px;
   min-height: 120px;
+}
+
+.frequently-typed .list {
+  position: relative;
+  padding: 24px 0;
+  max-width: 100%;
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+}
+.frequently-typed .list::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  height: 100px;
+  width: 104px;
+  background: linear-gradient(270deg, #fff 2.72%, rgba(255, 255, 255, 0) 100%);
+}
+.frequently-typed .list__item .btn {
+  border-radius: 32px;
+  background: #f9f7ff;
+  padding: 16px 24px;
+  white-space: nowrap;
+  color: #3145af;
+  font-size: 24px;
+  line-height: 40px;
 }
 
 .footer {

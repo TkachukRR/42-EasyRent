@@ -1,0 +1,30 @@
+.section {
+  padding-top: 8px;
+
+  background-color: $bg-color-tertiary;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 24px;
+  }
+
+  &__title {
+    padding: 12px 8px 8px;
+
+    color: $text-color-primary;
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-xxl;
+
+    @media screen and (min-width: $tablet) {
+      padding: 24px 8px 16px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 48px 8px 16px;
+    }
+  }
+}
