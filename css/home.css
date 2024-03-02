@@ -561,6 +561,8 @@ svg {
 }
 .popular-sports .slider .sport__img {
   position: relative;
+  object-fit: cover;
+  object-position: 50% 75%;
 }
 .popular-sports .slider .sport__name {
   position: absolute;
@@ -586,6 +588,111 @@ svg {
   border-radius: 16px;
   overflow: hidden;
   z-index: 1;
+}
+
+.information {
+  padding: 20px 0;
+}
+@media screen and (min-width: 1024px) {
+  .information {
+    padding: 40px 0;
+  }
+}
+.information .container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .information .container {
+    position: static;
+  }
+}
+.information__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .information__image {
+    display: block;
+  }
+}
+.information__image .img {
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.information__description {
+  flex: 1;
+  position: absolute;
+}
+@media screen and (max-width: 1024px) {
+  .information__description {
+    z-index: 1;
+    padding: 12px;
+  }
+  .information__description:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    opacity: 0.65;
+    border-radius: 16px;
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .information__description {
+    position: static;
+  }
+}
+.information__description .item {
+  max-width: 300px;
+}
+@media screen and (min-width: 1024px) {
+  .information__description .item {
+    max-width: 370px;
+  }
+}
+.information__description .item:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1024px) {
+  .information__description .item:not(:last-of-type) {
+    margin-bottom: 48px;
+  }
+}
+.information__description .title {
+  color: #364ea3;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .information__description .title {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 32px;
+  }
+}
+.information__description .text {
+  color: #363644;
+  font-size: 24px;
+  line-height: 32px;
+}
+@media screen and (min-width: 1024px) {
+  .information__description .text {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 .footer {

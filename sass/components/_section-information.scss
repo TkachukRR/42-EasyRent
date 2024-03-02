@@ -1,0 +1,103 @@
+.information {
+  padding: 20px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 40px 0;
+  }
+
+  .container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    @media screen and (min-width: $desktop) {
+      position: static;
+    }
+  }
+
+  &__image {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: $desktop) {
+      display: block;
+    }
+
+    .img {
+      object-fit: cover;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }
+  &__description {
+    flex: 1;
+    position: absolute;
+
+    @media screen and (max-width: $desktop) {
+      z-index: 1;
+      padding: 12px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: 100%;
+        background-color: $bg-color-tertiary;
+        opacity: 0.65;
+        border-radius: 16px;
+        z-index: -1;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: static;
+    }
+
+    .item {
+      max-width: 300px;
+
+      @media screen and (min-width: $desktop) {
+        max-width: 370px;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 24px;
+
+        @media screen and (min-width: $desktop) {
+          margin-bottom: 48px;
+        }
+      }
+    }
+
+    .title {
+      color: $text-color-blue-400;
+      font-size: $font-size-xl;
+      font-weight: $font-weight-semi;
+      line-height: $line-height-l;
+      margin-bottom: 16px;
+
+      @media screen and (min-width: $desktop) {
+        font-size: $font-size-xxxl;
+        line-height: $line-height-xl;
+        margin-bottom: 32px;
+      }
+    }
+
+    .text {
+      color: $text-color-primary;
+      font-size: $font-size-l;
+      line-height: $line-height-m;
+
+      @media screen and (min-width: $desktop) {
+        font-size: $font-size-xxl;
+        line-height: $line-height-l;
+      }
+    }
+  }
+}

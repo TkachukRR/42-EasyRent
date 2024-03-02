@@ -18,6 +18,8 @@
       overflow: hidden;
       &__img {
         position: relative;
+        object-fit: cover;
+        object-position: 50% 75%;
       }
       &__name {
         position: absolute;
