@@ -1,4 +1,21 @@
 .main {
   flex: 1;
   background-color: $bg-color-tertiary;
+
+  display: flex;
+
+  .content {
+    flex: 1;
+
+    padding: 32px 60px 32px 16px;
+
+    .search {
+      padding: 0;
+      max-width: 923px;
+    }
+
+    .container {
+      padding: 0;
+    }
+  }
 }

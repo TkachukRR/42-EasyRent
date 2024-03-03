@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   display: flex;
   min-height: 100%;
@@ -255,6 +256,18 @@ svg {
 .main {
   flex: 1;
   background-color: #ffffff;
+  display: flex;
+}
+.main .content {
+  flex: 1;
+  padding: 32px 60px 32px 16px;
+}
+.main .content .search {
+  padding: 0;
+  max-width: 923px;
+}
+.main .content .container {
+  padding: 0;
 }
 
 .filter-params {
@@ -327,6 +340,111 @@ svg {
   margin-left: 8px;
   color: #363644;
   font-weight: 400;
+}
+
+.search {
+  padding: 20px 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .search {
+    padding: 40px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .search {
+    padding: 80px 0;
+  }
+}
+.search .form-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 923px;
+  margin: 0 auto;
+}
+.search .wrapper {
+  flex-grow: 1;
+  display: flex;
+  gap: 24px;
+}
+.search .input {
+  flex-grow: 1;
+  display: inline-flex;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e4e8f6;
+  background: #fafafa;
+  box-shadow: 0px 3px 8px 0px rgba(36, 36, 44, 0.03);
+}
+.search .input input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+.search .input input:focus-visible {
+  outline: none;
+  border: none;
+}
+.search .input input::placeholder {
+  color: #363644;
+  line-height: 40px;
+}
+.search .select {
+  appearance: none;
+  flex: 1;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e4e8f6;
+  background: #fafafa;
+  box-shadow: 0px 3px 8px 0px rgba(36, 36, 44, 0.03);
+}
+.search .btn {
+  padding: 16px 32px;
+  color: #efeff0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  border-radius: 8px;
+  background: #6f6dff;
+  box-shadow: 0px 4px 16px 0px rgba(36, 36, 44, 0.2);
+}
+
+.search-results {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 16px 0;
+}
+.search-results .title {
+  color: #82829b;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+}
+.search-results .results {
+  display: flex;
+  gap: 8px;
+  color: #49495b;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+}
+.search-results .results__quantity::before {
+  content: "(";
+}
+.search-results .results__quantity::after {
+  content: ")";
+}
+.search-results .product {
+  display: flex;
+}
+.search-results .product__name::after {
+  content: ", ";
 }
 
 .footer {

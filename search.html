@@ -176,7 +176,50 @@
           </li>
         </ul>
       </aside>
-      <div class="content"></div>
+      <div class="content">
+        <section class="search">
+          <div class="container">
+            <form class="form-search" action="/search.html">
+              <label class="input">
+                <svg class="icon" height="24" width="24">
+                  <use xlink:href="images/icons.svg#icon-search"></use>
+                </svg>
+                <input
+                  type="text"
+                  name="search"
+                  placeholder="Jakiego produktu szukasz?"
+                  required
+                />
+              </label>
+
+              <div class="wrapper">
+                <select class="select" name="location" required="required">
+                  <option value="">Lokalizacja</option>
+                  <option value="1">location 1</option>
+                  <option value="2">location 2</option>
+                  <option value="3">location 3</option>
+                  <option value="4">location 4</option>
+                  <option value="5">location 5</option>
+                  <option value="6">location 6</option>
+                </select>
+
+                <button class="btn" type="submit">Szukaj</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="search-results">
+          <h3 class="title">Wyniki wyszukiwania dla:</h3>
+          <div class="results">
+            <div class="results__product product">
+              <div class="product__name">Rower</div>
+              <div class="product__location">Warszawa</div>
+            </div>
+            <div class="results__quantity">1134</div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
