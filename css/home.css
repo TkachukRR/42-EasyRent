@@ -236,6 +236,8 @@ svg {
 .header {
   padding: 8px 0;
   background-color: #24242c;
+  box-shadow: 0px 2px 15px 0px rgba(73, 73, 90, 0.28);
+  z-index: 1;
   font-size: 20px;
   line-height: 32px;
 }
