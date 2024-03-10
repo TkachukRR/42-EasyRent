@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyRent</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/home.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="container">
+        <a href="/index.html" class="logo">EasyRent</a>
+        <ul class="navigation">
+          <li class="navigation__item">
+            <a href="#" class="btn">
+              <svg class="icon" height="24" width="24">
+                <use xlink:href="images/icons.svg#icon-cart"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="navigation__item"><a href="#" class="btn">zaloguj</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="company">
+          <h1 class="company__slogan">
+            Jesteś w najlepszym miejscu, aby wypożyczyć sprzęt sportowy na każdą
+            okazję!
+          </h1>
+          <ul class="company__statistic">
+            <li class="item"><span class="quantity"> 3475</span>partnerów</li>
+            <li class="item"><span class="quantity">12 008</span>rezerwacji</li>
+            <li class="item"><span class="quantity">11 704</span>klientów</li>
+          </ul>
+        </div>
+        <ul class="images">
+          <li class="images__item">
+            <img src="/images/bike.webp" alt="bike" width="268" height="382" />
+          </li>
+          <li class="images__item">
+            <img
+              src="/images/skiing.webp"
+              alt="skiing"
+              width="268"
+              height="382"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <section class="search">
+        <div class="container">
+          <form class="form-search" action="/search.html">
+            <label class="input">
+              <svg class="icon" height="24" width="24">
+                <use xlink:href="images/icons.svg#icon-search"></use>
+              </svg>
+              <input
+                type="text"
+                name="search"
+                placeholder="Jakiego produktu szukasz?"
+                required
+              />
+            </label>
+
+            <div class="wrapper">
+              <select class="select" name="location" required="required">
+                <option value="">Lokalizacja</option>
+                <option value="1">location 1</option>
+                <option value="2">location 2</option>
+                <option value="3">location 3</option>
+                <option value="4">location 4</option>
+                <option value="5">location 5</option>
+                <option value="6">location 6</option>
+              </select>
+
+              <button class="btn" type="submit">Szukaj</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="instruction container">
+        <h3 class="title">Zobacz jakie to proste</h3>
+        <ul class="list">
+          <li class="list__item card">
+            <svg class="card__icon icon" height="56" width="56">
+              <use xlink:href="images/icons.svg#icon-search"></use>
+            </svg>
+            <h4 class="card__title">Odkryj i wybierz</h4>
+            <p class="card__text">
+              Rozpocznij swoje poszukiwania, wybierając dogodną lokalizację
+              naszej wypożyczalni, która jest najbliżej Ciebie i oferuje
+              dokładnie to czego potzrebujesz.
+            </p>
+          </li>
+
+          <li class="list__item card">
+            <svg class="card__icon icon" height="56" width="56">
+              <use xlink:href="images/icons.svg#icon-calendar"></use>
+            </svg>
+            <h4 class="card__title">Zarezerwuj i opłać</h4>
+            <p class="card__text">
+              Gdy już wybrałeś swój sprzęt, czas na zarezerwowanie i opłacenie
+              go. Dzięki prostemu procesowi rezerwacji i bezpiecznym opcjom
+              płatności online, całość załatwisz zaledwie kilkoma kliknięciami.
+            </p>
+          </li>
+          <li class="list__item card">
+            <svg class="card__icon icon" height="56" width="56">
+              <use xlink:href="images/icons.svg#icon-emotion"></use>
+            </svg>
+            <h4 class="card__title">Odbierz z wypożyczalni</h4>
+            <p class="card__text">
+              Po potwierdzeniu rezerwacji, przyjdź do naszej lokalizacji, aby
+              odebrać swój sprzęt. Nasz przyjazny personel będzie gotowy, aby
+              zapewnić Ci szybkie i bezproblemowe doświadczenie odbioru.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="frequently-typed section">
+        <div class="container">
+          <h3 class="section__title">Najczęściej wpisywane</h3>
+
+          <ul class="list scrollbar--hidden">
+            <li class="list__item">
+              <button type="button" class="btn">Rower górski</button>
+            </li>
+            <li class="list__item">
+              <button type="button" class="btn">Kajak</button>
+            </li>
+            <li class="list__item">
+              <button type="button" class="btn">Raki</button>
+            </li>
+            <li class="list__item">
+              <button type="button" class="btn">Bieznia domowa</button>
+            </li>
+            <li class="list__item">
+              <button type="button" class="btn">Rower stacjonarny</button>
+            </li>
+            <li class="list__item">
+              <button type="button" class="btn">Rakiety śnieżne</button>
+            </li>
+            <li class="list__item">
+              <button type="button" class="btn">Namiot kempingowy</button>
+            </li>
+            <li class="list__item">
+              <button type="button" class="btn">Lodówka przenośna</button>
+            </li>
+            <li class="list__item">
+              <button type="button" class="btn">Nosidełka turystyczne</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="popular-sports section">
+        <div class="container">
+          <h3 class="section__title">Popularne sporty</h3>
+        </div>
+
+        <ul class="slider scrollbar--hidden">
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-1.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-1.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-1.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-1.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-1.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-1.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-1.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-2.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-3.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Sporty zimowe</h4>
+          </li>
+
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-4.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Siłownia</h4>
+          </li>
+
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-5.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-5.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-5.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-5.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-5.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-5.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+          <li class="slider__item sport">
+            <img
+              class="sport__img"
+              src="/images/img-5.webp"
+              alt="Jeździectwo"
+              height="184"
+              width="384"
+            />
+            <h4 class="sport__name">Jeździectwo</h4>
+          </li>
+        </ul>
+      </section>
+
+      <section class="information section">
+        <div class="container">
+          <div class="information__image">
+            <img
+              class="img"
+              src="/images/nature.webp"
+              alt="nature"
+              width="544"
+              height="721"
+            />
+          </div>
+
+          <ul class="information__description">
+            <li class="item">
+              <h4 class="title">Bezpieczeństwo</h4>
+              <p class="text">Transparentność, uczciwość i profesjonalizm.</p>
+            </li>
+            <li class="item">
+              <h4 class="title">Oferta</h4>
+              <p class="text">
+                Bogaty wybór sprzętu dla różnorodnych dyscyplin.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="container">
+        <ul class="navi">
+          <li class="navi__item">
+            <h3 class="title">Informacje</h3>
+            <ul class="list">
+              <li><a class="link" href="#">Pytania</a></li>
+              <li><a class="link" href="#">Płatności</a></li>
+              <li><a class="link" href="#">Reklamacja</a></li>
+            </ul>
+          </li>
+
+          <li class="navi__item">
+            <h3 class="title">Regulaminy</h3>
+            <ul class="list">
+              <li><a class="link" href="#">Polityka prywatności</a></li>
+              <li><a class="link" href="#">Regulamin</a></li>
+            </ul>
+          </li>
+
+          <li class="navi__item">
+            <h3 class="title">Kontakt</h3>
+            <ul class="list">
+              <li><a class="link" href="#">O nas</a></li>
+              <li><a class="link" href="#">Kontakt</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="/index.html" class="logo">EasyRent</a>
+      </nav>
+    </footer>
+
+    <script>
+      const middleIndex = Math.floor(
+        document.querySelectorAll('.slider__item').length / 2
+      );
+      document
+        .querySelectorAll('.slider__item')
+        [middleIndex].scrollIntoView({ inline: 'center' });
+    </script>
+  </body>
+</html>

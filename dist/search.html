@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyRent</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/search.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="container">
+        <a href="/index.html" class="logo">EasyRent</a>
+        <ul class="navigation">
+          <li class="navigation__item">
+            <a href="#" class="btn">
+              <svg class="icon" height="24" width="24">
+                <use xlink:href="images/icons.svg#icon-cart"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="navigation__item"><a href="#" class="btn">zaloguj</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <aside class="filter-params">
+        <ul class="parameters">
+          <li class="parameters__item param">
+            <h5 class="param__title">Typ roweru</h5>
+            <ul class="param__list">
+              <li class="param__item">
+                <input type="checkbox" id="bikeType-1" name="bikeType" />
+                <label for="bikeType-1"> Górski </label>
+              </li>
+              <li class="param__item">
+                <input type="checkbox" id="bikeType-2" name="bikeType" />
+                <label for="bikeType-2"> Szosowy </label>
+              </li>
+              <li class="param__item">
+                <input type="checkbox" id="bikeType-3" name="bikeType" />
+                <label for="bikeType-3"> Miejski </label>
+              </li>
+              <li class="param__item">
+                <input type="checkbox" id="bikeType-4" name="bikeType" />
+                <label for="bikeType-4"> Dziecięcy </label>
+              </li>
+              <li class="param__item">
+                <input type="checkbox" id="bikeType-5" name="bikeType" />
+                <label for="bikeType-5"> Elektryczny </label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="parameters__item param">
+            <h5 class="param__title">Wypożyczalnia Warszawa</h5>
+            <ul class="param__list">
+              <li class="param__item">
+                <input
+                  type="checkbox"
+                  id="bikeLocation-1"
+                  name="bikeLocation"
+                />
+                <label for="bikeLocation-1">
+                  Orbiqa
+                  <span>(412)</span>
+                </label>
+              </li>
+              <li class="param__item">
+                <input
+                  type="checkbox"
+                  id="bikeLocation-2"
+                  name="bikeLocation"
+                />
+                <label for="bikeLocation-2">
+                  Orbiswera
+                  <span>(156)</span>
+                </label>
+              </li>
+              <li class="param__item">
+                <input
+                  type="checkbox"
+                  id="bikeLocation-3"
+                  name="bikeLocation"
+                />
+                <label for="bikeLocation-3">
+                  Fitnes u drzwi
+                  <span>(88)</span>
+                </label>
+              </li>
+              <li class="param__item">
+                <input
+                  type="checkbox"
+                  id="bikeLocation-4"
+                  name="bikeLocation"
+                />
+                <label for="bikeLocation-4">
+                  Sportano
+                  <span>(79)</span>
+                </label>
+              </li>
+              <li class="param__item">
+                <input
+                  type="checkbox"
+                  id="bikeLocation-5"
+                  name="bikeLocation"
+                />
+                <label for="bikeLocation-5">
+                  Caspi
+                  <span>(219)</span>
+                </label>
+              </li>
+              <li class="param__item">
+                <input
+                  type="checkbox"
+                  id="bikeLocation-6"
+                  name="bikeLocation"
+                />
+                <label for="bikeLocation-6">
+                  Fitness place
+                  <span>(219)</span>
+                </label>
+              </li>
+              <li class="param__item">
+                <input
+                  type="checkbox"
+                  id="bikeLocation-7"
+                  name="bikeLocation"
+                />
+                <label for="bikeLocation-7">
+                  Fitness place
+                  <span>(219)</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="parameters__item param">
+            <h5 class="param__title">Sortuj według</h5>
+            <ul class="param__list">
+              <li class="param__item">
+                <input type="radio" id="sortBy-1" name="sortBy" />
+                <label for="sortBy-1"> Najwyżej oceniane </label>
+              </li>
+              <li class="param__item">
+                <input type="radio" id="sortBy-2" name="sortBy" />
+                <label for="sortBy-2"> Ostatnio dodane </label>
+              </li>
+              <li class="param__item">
+                <input type="radio" id="sortBy-3" name="sortBy" />
+                <label for="sortBy-3"> Najbliżej Ciebie </label>
+              </li>
+              <li class="param__item">
+                <input type="radio" id="sortBy-4" name="sortBy" />
+                <label for="sortBy-4"> Cena rosnąco </label>
+              </li>
+              <li class="param__item">
+                <input type="radio" id="sortBy-5" name="sortBy" />
+                <label for="sortBy-5"> Cena malejąco </label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="content">
+        <!-- <section class="search">
+          <div class="container">
+            <form class="form-search" action="/search.html">
+              <label class="input">
+                <svg class="icon" height="24" width="24">
+                  <use xlink:href="images/icons.svg#icon-search"></use>
+                </svg>
+                <input
+                  type="text"
+                  name="search"
+                  placeholder="Jakiego produktu szukasz?"
+                  required
+                />
+              </label>
+
+              <div class="wrapper">
+                <select class="select" name="location" required="required">
+                  <option value="">Lokalizacja</option>
+                  <option value="1">location 1</option>
+                  <option value="2">location 2</option>
+                  <option value="3">location 3</option>
+                  <option value="4">location 4</option>
+                  <option value="5">location 5</option>
+                  <option value="6">location 6</option>
+                </select>
+
+                <button class="btn" type="submit">Szukaj</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="search-results">
+          <h3 class="title">Wyniki wyszukiwania dla:</h3>
+          <div class="results">
+            <div class="results__product product">
+              <div class="product__name">Rower</div>
+              <div class="product__location">Warszawa</div>
+            </div>
+            <div class="results__quantity">1134</div>
+          </div>
+        </section> -->
+
+        <!-- <section>
+          <div class="product-card">
+            <div class="product-card__header">
+              <img src="" alt="" width="484" height="216" />
+            </div>
+            <div class="product-card__main">
+              <div class="title">
+                <h2>Rower Miejski</h2>
+                <a href="#" class="btn">
+                  <svg class="icon" height="24" width="24">
+                    <use xlink:href="images/icons.svg#icon-cart"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="available">
+                Najbliższa wolna rezerwacja:
+                <span class="available__date">27 styczeń</span>
+              </div>
+            </div>
+            <div class="product-card__footer">
+              <div class="sides">
+                <div class="sides__left">
+                  <div class="info">
+                    <div class="info__text">
+                      <svg class="icon" height="16" width="16">
+                        <use xlink:href="images/icons.svg#icon-pin"></use>
+                      </svg>
+                      Warszawa
+                    </div>
+                    <div class="info__text">
+                      <svg class="icon" height="16" width="16">
+                        <use
+                          xlink:href="images/icons.svg#icon-chat-heart"
+                        ></use>
+                      </svg>
+                      138 poleceń
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="details__rate">
+                      Caspi
+                      <span class="quantity">4.8</span>
+                    </div>
+                    <a href="#" class="details__more">Zobacz produkty</a>
+                  </div>
+                </div>
+                <div class="sides__right"></div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+      </div>
+
+      <div class="">
+        <a href="/index.html"> Powrót na stronę główną </a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <nav class="container">
+        <ul class="navi">
+          <li class="navi__item">
+            <h3 class="title">Informacje</h3>
+            <ul class="list">
+              <li><a class="link" href="#">Pytania</a></li>
+              <li><a class="link" href="#">Płatności</a></li>
+              <li><a class="link" href="#">Reklamacja</a></li>
+            </ul>
+          </li>
+
+          <li class="navi__item">
+            <h3 class="title">Regulaminy</h3>
+            <ul class="list">
+              <li><a class="link" href="#">Polityka prywatności</a></li>
+              <li><a class="link" href="#">Regulamin</a></li>
+            </ul>
+          </li>
+
+          <li class="navi__item">
+            <h3 class="title">Kontakt</h3>
+            <ul class="list">
+              <li><a class="link" href="#">O nas</a></li>
+              <li><a class="link" href="#">Kontakt</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="/index.html" class="logo">EasyRent</a>
+      </nav>
+    </footer>
+  </body>
+</html>

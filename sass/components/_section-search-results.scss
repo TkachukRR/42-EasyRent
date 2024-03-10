@@ -2,13 +2,22 @@
   display: flex;
   align-items: baseline;
   gap: 8px;
+  padding: 8px 32px 16px;
 
-  padding: 16px 0;
+  @media screen and (min-width: $tablet) {
+    padding: 16px;
+  }
+
   .title {
-    color: $text-color-blue-gray-500;
-    font-size: $font-size-xs;
-    line-height: $line-height-xs;
-    letter-spacing: $letter-spacing-s;
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+      color: $text-color-blue-gray-500;
+      font-size: $font-size-xs;
+      line-height: $line-height-xs;
+      letter-spacing: $letter-spacing-s;
+    }
   }
   .results {
     display: flex;
@@ -21,6 +30,10 @@
     letter-spacing: $letter-spacing-m;
 
     &__quantity {
+      @media screen and (max-width: $tablet) {
+        display: none;
+      }
+
       &::before {
         content: '(';
       }
@@ -32,9 +45,31 @@
   }
   .product {
     display: flex;
+    @media screen and (max-width: $tablet) {
+      flex-direction: column;
+    }
+
     &__name {
+      @media screen and (max-width: $tablet) {
+        color: $bg-color-secondary;
+        font-size: $font-size-l;
+        font-weight: $font-weight-semi;
+        line-height: $line-height-m;
+      }
+
       &::after {
-        content: ',\00a0';
+        @media screen and (min-width: $tablet) {
+          content: ',\00a0';
+        }
+      }
+    }
+
+    &__location {
+      @media screen and (max-width: $tablet) {
+        color: $text-color-blue-gray-500;
+        font-size: $font-size-s;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-xs;
       }
     }
   }

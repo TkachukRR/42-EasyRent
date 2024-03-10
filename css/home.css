@@ -395,24 +395,14 @@ svg {
 .search {
   padding: 20px 0;
   text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .search {
-    padding: 40px 0;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .search {
-    padding: 80px 0;
-  }
+  width: 100%;
 }
 .search .form-search {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
-  max-width: 923px;
-  margin: 0 auto;
+  width: 100%;
 }
 .search .wrapper {
   flex-grow: 1;
@@ -461,6 +451,56 @@ svg {
   border-radius: 8px;
   background: #6f6dff;
   box-shadow: 0px 4px 16px 0px rgba(36, 36, 44, 0.2);
+}
+
+#searchingPanelOpen,
+#searchingPanelClose {
+  display: none;
+}
+
+.searching-btn--open {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .searching-btn--open {
+    float: right;
+    margin-top: 16px;
+    margin-right: 32px;
+    border-radius: 48px;
+    background: #24242c;
+    padding: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: #ffffff;
+    box-shadow: 0px 5px 18px 0px rgba(36, 36, 44, 0.24);
+  }
+}
+.searching-btn--open .icon {
+  fill: inherit;
+}
+
+.searching-btn--close {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .searching-btn--close {
+    align-items: center;
+    margin-right: 24px;
+  }
+}
+
+#searchingPanelOpen:checked ~ * .searching-btn--close {
+  display: inline-flex;
+}
+@media screen and (min-width: 768px) {
+  #searchingPanelOpen:checked ~ * .searching-btn--close {
+    display: none;
+  }
+}
+
+#searchingPanelOpen:checked ~ * .search .container {
+  display: flex;
 }
 
 .instruction .title {

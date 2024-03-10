@@ -38,187 +38,232 @@
     </header>
 
     <main class="main">
-      <aside class="filter-params">
-        <ul class="parameters">
-          <li class="parameters__item param">
-            <h5 class="param__title">Typ roweru</h5>
-            <ul class="param__list">
-              <li class="param__item">
-                <input type="checkbox" id="bikeType-1" name="bikeType" />
-                <label for="bikeType-1"> Górski </label>
-              </li>
-              <li class="param__item">
-                <input type="checkbox" id="bikeType-2" name="bikeType" />
-                <label for="bikeType-2"> Szosowy </label>
-              </li>
-              <li class="param__item">
-                <input type="checkbox" id="bikeType-3" name="bikeType" />
-                <label for="bikeType-3"> Miejski </label>
-              </li>
-              <li class="param__item">
-                <input type="checkbox" id="bikeType-4" name="bikeType" />
-                <label for="bikeType-4"> Dziecięcy </label>
-              </li>
-              <li class="param__item">
-                <input type="checkbox" id="bikeType-5" name="bikeType" />
-                <label for="bikeType-5"> Elektryczny </label>
-              </li>
-            </ul>
-          </li>
+      <a class="home-page" href="/index.html">
+        <svg class="icon" height="40" width="40">
+          <use xlink:href="images/icons.svg#icon-arrow-left"></use>
+        </svg>
+        Powrót na stronę główną
+      </a>
 
-          <li class="parameters__item param">
-            <h5 class="param__title">Wypożyczalnia Warszawa</h5>
-            <ul class="param__list">
-              <li class="param__item">
-                <input
-                  type="checkbox"
-                  id="bikeLocation-1"
-                  name="bikeLocation"
-                />
-                <label for="bikeLocation-1">
-                  Orbiqa
-                  <span>(412)</span>
-                </label>
-              </li>
-              <li class="param__item">
-                <input
-                  type="checkbox"
-                  id="bikeLocation-2"
-                  name="bikeLocation"
-                />
-                <label for="bikeLocation-2">
-                  Orbiswera
-                  <span>(156)</span>
-                </label>
-              </li>
-              <li class="param__item">
-                <input
-                  type="checkbox"
-                  id="bikeLocation-3"
-                  name="bikeLocation"
-                />
-                <label for="bikeLocation-3">
-                  Fitnes u drzwi
-                  <span>(88)</span>
-                </label>
-              </li>
-              <li class="param__item">
-                <input
-                  type="checkbox"
-                  id="bikeLocation-4"
-                  name="bikeLocation"
-                />
-                <label for="bikeLocation-4">
-                  Sportano
-                  <span>(79)</span>
-                </label>
-              </li>
-              <li class="param__item">
-                <input
-                  type="checkbox"
-                  id="bikeLocation-5"
-                  name="bikeLocation"
-                />
-                <label for="bikeLocation-5">
-                  Caspi
-                  <span>(219)</span>
-                </label>
-              </li>
-              <li class="param__item">
-                <input
-                  type="checkbox"
-                  id="bikeLocation-6"
-                  name="bikeLocation"
-                />
-                <label for="bikeLocation-6">
-                  Fitness place
-                  <span>(219)</span>
-                </label>
-              </li>
-              <li class="param__item">
-                <input
-                  type="checkbox"
-                  id="bikeLocation-7"
-                  name="bikeLocation"
-                />
-                <label for="bikeLocation-7">
-                  Fitness place
-                  <span>(219)</span>
-                </label>
-              </li>
-            </ul>
-          </li>
+      <input type="radio" name="searching" id="searchingPanelOpen" />
+      <label for="searchingPanelOpen" class="searching-btn--open">
+        <svg class="icon" height="24" width="24">
+          <use xlink:href="images/icons.svg#icon-search-2"></use>
+        </svg>
+      </label>
 
-          <li class="parameters__item param">
-            <h5 class="param__title">Sortuj według</h5>
-            <ul class="param__list">
-              <li class="param__item">
-                <input type="radio" id="sortBy-1" name="sortBy" />
-                <label for="sortBy-1"> Najwyżej oceniane </label>
-              </li>
-              <li class="param__item">
-                <input type="radio" id="sortBy-2" name="sortBy" />
-                <label for="sortBy-2"> Ostatnio dodane </label>
-              </li>
-              <li class="param__item">
-                <input type="radio" id="sortBy-3" name="sortBy" />
-                <label for="sortBy-3"> Najbliżej Ciebie </label>
-              </li>
-              <li class="param__item">
-                <input type="radio" id="sortBy-4" name="sortBy" />
-                <label for="sortBy-4"> Cena rosnąco </label>
-              </li>
-              <li class="param__item">
-                <input type="radio" id="sortBy-5" name="sortBy" />
-                <label for="sortBy-5"> Cena malejąco </label>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
-      <div class="content">
-        <section class="search">
-          <div class="container">
-            <form class="form-search" action="/search.html">
-              <label class="input">
-                <svg class="icon" height="24" width="24">
-                  <use xlink:href="images/icons.svg#icon-search"></use>
-                </svg>
-                <input
-                  type="text"
-                  name="search"
-                  placeholder="Jakiego produktu szukasz?"
-                  required
-                />
-              </label>
+      <input type="radio" name="sideFilterPanel" id="sideFilterPanelOpen" />
+      <label for="sideFilterPanelOpen" class="side-menu-btn--open">
+        <svg class="icon" height="24" width="24">
+          <use xlink:href="images/icons.svg#icon-filter"></use>
+        </svg>
+      </label>
 
-              <div class="wrapper">
-                <select class="select" name="location" required="required">
-                  <option value="">Lokalizacja</option>
-                  <option value="1">location 1</option>
-                  <option value="2">location 2</option>
-                  <option value="3">location 3</option>
-                  <option value="4">location 4</option>
-                  <option value="5">location 5</option>
-                  <option value="6">location 6</option>
-                </select>
-
-                <button class="btn" type="submit">Szukaj</button>
-              </div>
-            </form>
+      <div class="wrapper">
+        <aside class="filter-params">
+          <div class="filter-params__header">
+            <h3 class="title">Filtry</h3>
+            <label for="sideFilterPanelClose" class="side-menu-btn--close">
+              <svg class="icon" height="24" width="24">
+                <use xlink:href="images/icons.svg#icon-close"></use>
+              </svg>
+            </label>
+            <input
+              type="radio"
+              name="sideFilterPanel"
+              id="sideFilterPanelClose"
+            />
           </div>
-        </section>
 
-        <section class="search-results">
-          <h3 class="title">Wyniki wyszukiwania dla:</h3>
-          <div class="results">
-            <div class="results__product product">
-              <div class="product__name">Rower</div>
-              <div class="product__location">Warszawa</div>
+          <ul class="parameters">
+            <li class="parameters__item param">
+              <h5 class="param__title">Typ roweru</h5>
+              <ul class="param__list">
+                <li class="param__item">
+                  <input type="checkbox" id="bikeType-1" name="bikeType" />
+                  <label for="bikeType-1"> Górski </label>
+                </li>
+                <li class="param__item">
+                  <input type="checkbox" id="bikeType-2" name="bikeType" />
+                  <label for="bikeType-2"> Szosowy </label>
+                </li>
+                <li class="param__item">
+                  <input type="checkbox" id="bikeType-3" name="bikeType" />
+                  <label for="bikeType-3"> Miejski </label>
+                </li>
+                <li class="param__item">
+                  <input type="checkbox" id="bikeType-4" name="bikeType" />
+                  <label for="bikeType-4"> Dziecięcy </label>
+                </li>
+                <li class="param__item">
+                  <input type="checkbox" id="bikeType-5" name="bikeType" />
+                  <label for="bikeType-5"> Elektryczny </label>
+                </li>
+              </ul>
+            </li>
+
+            <li class="parameters__item param">
+              <h5 class="param__title">Wypożyczalnia Warszawa</h5>
+              <ul class="param__list">
+                <li class="param__item">
+                  <input
+                    type="checkbox"
+                    id="bikeLocation-1"
+                    name="bikeLocation"
+                  />
+                  <label for="bikeLocation-1">
+                    Orbiqa
+                    <span>(412)</span>
+                  </label>
+                </li>
+                <li class="param__item">
+                  <input
+                    type="checkbox"
+                    id="bikeLocation-2"
+                    name="bikeLocation"
+                  />
+                  <label for="bikeLocation-2">
+                    Orbiswera
+                    <span>(156)</span>
+                  </label>
+                </li>
+                <li class="param__item">
+                  <input
+                    type="checkbox"
+                    id="bikeLocation-3"
+                    name="bikeLocation"
+                  />
+                  <label for="bikeLocation-3">
+                    Fitnes u drzwi
+                    <span>(88)</span>
+                  </label>
+                </li>
+                <li class="param__item">
+                  <input
+                    type="checkbox"
+                    id="bikeLocation-4"
+                    name="bikeLocation"
+                  />
+                  <label for="bikeLocation-4">
+                    Sportano
+                    <span>(79)</span>
+                  </label>
+                </li>
+                <li class="param__item">
+                  <input
+                    type="checkbox"
+                    id="bikeLocation-5"
+                    name="bikeLocation"
+                  />
+                  <label for="bikeLocation-5">
+                    Caspi
+                    <span>(219)</span>
+                  </label>
+                </li>
+                <li class="param__item">
+                  <input
+                    type="checkbox"
+                    id="bikeLocation-6"
+                    name="bikeLocation"
+                  />
+                  <label for="bikeLocation-6">
+                    Fitness place
+                    <span>(219)</span>
+                  </label>
+                </li>
+                <li class="param__item">
+                  <input
+                    type="checkbox"
+                    id="bikeLocation-7"
+                    name="bikeLocation"
+                  />
+                  <label for="bikeLocation-7">
+                    Fitness place
+                    <span>(219)</span>
+                  </label>
+                </li>
+              </ul>
+            </li>
+
+            <li class="parameters__item param">
+              <h5 class="param__title">Sortuj według</h5>
+              <ul class="param__list">
+                <li class="param__item">
+                  <input type="radio" id="sortBy-1" name="sortBy" />
+                  <label for="sortBy-1"> Najwyżej oceniane </label>
+                </li>
+                <li class="param__item">
+                  <input type="radio" id="sortBy-2" name="sortBy" />
+                  <label for="sortBy-2"> Ostatnio dodane </label>
+                </li>
+                <li class="param__item">
+                  <input type="radio" id="sortBy-3" name="sortBy" />
+                  <label for="sortBy-3"> Najbliżej Ciebie </label>
+                </li>
+                <li class="param__item">
+                  <input type="radio" id="sortBy-4" name="sortBy" />
+                  <label for="sortBy-4"> Cena rosnąco </label>
+                </li>
+                <li class="param__item">
+                  <input type="radio" id="sortBy-5" name="sortBy" />
+                  <label for="sortBy-5"> Cena malejąco </label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+
+        <div class="content">
+          <section class="search">
+            <input type="radio" name="searching" id="searchingPanelClose" />
+            <label for="searchingPanelClose" class="searching-btn--close">
+              <svg class="icon" height="24" width="24">
+                <use xlink:href="images/icons.svg#icon-close"></use>
+              </svg>
+            </label>
+
+            <div class="container">
+              <form class="form-search" action="/search.html">
+                <label class="input">
+                  <svg class="icon" height="24" width="24">
+                    <use xlink:href="images/icons.svg#icon-search"></use>
+                  </svg>
+                  <input
+                    type="text"
+                    name="search"
+                    placeholder="Jakiego produktu szukasz?"
+                    required
+                  />
+                </label>
+
+                <div class="wrapper">
+                  <select class="select" name="location" required="required">
+                    <option value="">Lokalizacja</option>
+                    <option value="1">location 1</option>
+                    <option value="2">location 2</option>
+                    <option value="3">location 3</option>
+                    <option value="4">location 4</option>
+                    <option value="5">location 5</option>
+                    <option value="6">location 6</option>
+                  </select>
+
+                  <button class="btn" type="submit">Szukaj</button>
+                </div>
+              </form>
             </div>
-            <div class="results__quantity">1134</div>
-          </div>
-        </section>
+          </section>
+
+          <section class="search-results">
+            <h3 class="title">Wyniki wyszukiwania dla:</h3>
+            <div class="results">
+              <div class="results__product product">
+                <div class="product__name">Rower</div>
+                <div class="product__location">Warszawa</div>
+              </div>
+              <div class="results__quantity">1134</div>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
 

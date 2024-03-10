@@ -1,17 +1,50 @@
 .main {
   flex: 1;
   background-color: $bg-color-tertiary;
+  position: relative;
 
-  display: flex;
+  .wrapper {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+    }
+  }
+
+  .home-page {
+    display: none;
+
+    @media screen and (max-width: $tablet) {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px 0px;
+    }
+  }
 
   .content {
     flex: 1;
 
-    padding: 32px 60px 32px 16px;
-
     .search {
       padding: 0;
       max-width: 923px;
+
+      @media screen and (max-width: $tablet) {
+        position: absolute;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      gap: 8px;
+
+      background-color: $bg-color-tertiary;
+
+      .container {
+        @media screen and (max-width: $tablet) {
+          display: none;
+          padding: 4px 24px;
+        }
+        padding: 32px 16px 0;
+      }
     }
 
     .container {

@@ -1,0 +1,105 @@
+.product-card {
+  &__header {
+    border-radius: 4px;
+    background: lightgray 50%;
+    overflow: hidden;
+  }
+  &__main {
+    padding: 8px;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 8px;
+
+      color: $text-color-secondary;
+      font-size: $font-size-m;
+      font-weight: $font-weight-semi;
+      line-height: $line-height-m;
+
+      .btn {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .available {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+
+      color: $text-color-blue-gray-600;
+      font-size: $font-size-xs;
+      line-height: $line-height-xs;
+      letter-spacing: $letter-spacing-s;
+      &__date {
+        color: $text-color-blue-gray-800;
+        font-size: $font-size-s;
+        line-height: $line-height-s;
+        letter-spacing: $letter-spacing-m;
+      }
+    }
+  }
+  &__footer {
+    padding: 0 5px;
+    .sides {
+      display: flex;
+      gap: 8px;
+
+      &__left {
+        flex-grow: 1;
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          padding: 8px;
+          margin-bottom: 16px;
+
+          color: $text-color-primary;
+          font-size: $font-size-s;
+          line-height: $line-height-xs;
+          letter-spacing: $letter-spacing-m;
+
+          &__text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+        }
+
+        .details {
+          padding: 0 8px;
+          &__rate {
+            color: $text-color-tertiary;
+            font-size: $font-size-s;
+            font-weight: $font-weight-semi;
+            line-height: $line-height-xs;
+
+            .quantity {
+              margin-left: 8px;
+              &::before {
+                content: '(';
+              }
+
+              &::after {
+                content: ')';
+              }
+            }
+          }
+          &__more {
+            margin: 14px 0;
+            color: $text-color-blue-400;
+            font-size: $font-size-xs;
+            line-height: $line-height-xs;
+            letter-spacing: $letter-spacing-s;
+            text-decoration-line: underline;
+          }
+        }
+      }
+      &__right {
+        flex-grow: 1;
+      }
+    }
+  }
+}
