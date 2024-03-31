@@ -780,5 +780,577 @@
         <a href="/index.html" class="logo">EasyRent</a>
       </nav>
     </footer>
+
+    <dialog class="popup">
+      <div class="popup__header">
+        <h2 class="title">Dodaj do koszyka</h2>
+        <button class="btn-close">
+          <svg class="icon" height="24" width="24">
+            <use xlink:href="images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="popup__body">
+        <div class="image">
+          <img
+            class="img"
+            src="./images/product.webp"
+            alt="product"
+            width="484"
+            height="216"
+          />
+        </div>
+
+        <form class="product" id="productForm" action="/submit">
+          <fieldset class="general-info">
+            <label class="name">
+              Produkt
+              <input
+                class="name__value"
+                type="text"
+                value="Rower Miejski"
+                disabled
+                required
+              />
+            </label>
+
+            <label class="price">
+              Cena za 1 dzień
+              <input
+                class="price__value"
+                type="text"
+                value="185zł"
+                disabled
+                required
+              />
+            </label>
+          </fieldset>
+
+          <div class="sub-info">
+            <label class="rate">
+              Orbiswera
+              <meter title="star" value="4.8" min="0" max="5">4.8/5</meter>
+              <span class="value">4.8/5</span>
+            </label>
+
+            <a class="service" href="#">Odwiedź wypożyczalnie (77)</a>
+          </div>
+
+          <fieldset class="date-picker">
+            <label for="dateStart" class="label">
+              Data rozpoczęcia
+              <span class="input">
+                <span class="input__text" id="rentStart"> Wybierz termin</span>
+                <span class="input__calendar"
+                  ><svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.49992 0.666687V2.00002H10.4999V0.666687H11.8333V2.00002H14.4999C14.8681 2.00002 15.1666 2.2985 15.1666 2.66669V13.3334C15.1666 13.7016 14.8681 14 14.4999 14H2.49992C2.13173 14 1.83325 13.7016 1.83325 13.3334V2.66669C1.83325 2.2985 2.13173 2.00002 2.49992 2.00002H5.16658V0.666687H6.49992ZM13.8333 7.33335H3.16659V12.6667H13.8333V7.33335ZM5.83325 8.66669V10H4.49992V8.66669H5.83325ZM9.16658 8.66669V10H7.83325V8.66669H9.16658ZM12.4999 8.66669V10H11.1666V8.66669H12.4999ZM5.16658 3.33335H3.16659V6.00002H13.8333V3.33335H11.8333V4.66669H10.4999V3.33335H6.49992V4.66669H5.16658V3.33335Z"
+                      fill="#49495B"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+            <input class="hidden" type="date" name="dateStart" id="dateStart" />
+
+            <label for="dateEnd" class="label">
+              Data zakończenia
+              <span class="input">
+                <span class="input__text" id="rentEnd">Wybierz termin</span>
+                <span class="input__calendar"
+                  ><svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.49992 0.666687V2.00002H10.4999V0.666687H11.8333V2.00002H14.4999C14.8681 2.00002 15.1666 2.2985 15.1666 2.66669V13.3334C15.1666 13.7016 14.8681 14 14.4999 14H2.49992C2.13173 14 1.83325 13.7016 1.83325 13.3334V2.66669C1.83325 2.2985 2.13173 2.00002 2.49992 2.00002H5.16658V0.666687H6.49992ZM13.8333 7.33335H3.16659V12.6667H13.8333V7.33335ZM5.83325 8.66669V10H4.49992V8.66669H5.83325ZM9.16658 8.66669V10H7.83325V8.66669H9.16658ZM12.4999 8.66669V10H11.1666V8.66669H12.4999ZM5.16658 3.33335H3.16659V6.00002H13.8333V3.33335H11.8333V4.66669H10.4999V3.33335H6.49992V4.66669H5.16658V3.33335Z"
+                      fill="#49495B"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+            <input class="hidden" type="date" name="dateEnd" id="dateEnd" />
+
+            <div class="calendar" id="calendar">
+              <div class="calendar-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <ul id="monthes">
+                  <li class="def"></li>
+                  <li class="def def--1"></li>
+                  <li class="def def--2"></li>
+                  <li class="def def--3"></li>
+                  <li class="active"></li>
+                  <li class="def def--3"></li>
+                  <li class="def def--2"></li>
+                  <li class="def def--1"></li>
+                  <li class="def"></li>
+                </ul>
+              </div>
+
+              <div class="buttons">
+                <button class="reset" type="button" id="dateReset">
+                  Anuluj
+                </button>
+                <button class="accept" type="button" id="dateAccept">
+                  Wybierz
+                </button>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="calculating">
+            <div class="quantity">
+              <label for="productQuantity" class="quantity__label">
+                Ilość
+              </label>
+              <div class="quantity__value value">
+                <button
+                  type="button"
+                  class="value__control"
+                  onclick="productQuantity.stepDown()"
+                  title="Decrease value"
+                  aria-label="Decrease value"
+                >
+                  <svg width="25" height="24" viewBox="0 0 25 24">
+                    <path d="M5.5 11V13H19.5V11H5.5Z" />
+                  </svg>
+                </button>
+                <input
+                  class="value__input"
+                  type="number"
+                  name="quantity"
+                  id="productQuantity"
+                  value="1"
+                  min="1"
+                />
+                <button
+                  type="button"
+                  class="value__control"
+                  onclick="productQuantity.stepUp()"
+                  title="Increase value"
+                  aria-label="Increase value"
+                >
+                  <svg width="25" height="24" viewBox="0 0 25 24">
+                    <path
+                      d="M11.5 11V5H13.5V11H19.5V13H13.5V19H11.5V13H5.5V11H11.5Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="price">
+              <label class="price__label" for="productPrice">
+                Kwota wypożyczenia
+              </label>
+              <input
+                class="price__value"
+                type="number"
+                name="price"
+                id="productPrice"
+                value="0.00"
+                step="0.01"
+                min="0"
+                disabled
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="popup__footer">
+        <button type="submit" class="form-submit" form="productForm">
+          Kontynuuj wypożyczanie
+        </button>
+        <a href="#" class="cart-link">Zobacz koszyk</a>
+      </div>
+    </dialog>
+
+    <script>
+      document.querySelector('dialog').showModal();
+      document.querySelectorAll('input[type="date"]').forEach((el) =>
+        el.addEventListener('click', function (event) {
+          event.preventDefault();
+        })
+      );
+
+      //calendar
+      const DAY = 24 * 60 * 60 * 1000;
+
+      const days = ['Nie', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'];
+      const monthNamesSort = [
+        'Sty',
+        'Lut',
+        'Marz',
+        'Kwie',
+        'Maj',
+        'Czw',
+        'Lip',
+        'Sie',
+        'Wrz',
+        'Paź',
+        'Lis',
+        'Gru',
+      ];
+      const monthNamesFull = [
+        'Styczeń',
+        'Luty',
+        'Marzec',
+        'Kwiecień',
+        'Maj',
+        'Czerwiec',
+        'Lipiec',
+        'Sierpień',
+        'Wrzesień',
+        'Październik',
+        'Listopad',
+        'Grudzień',
+      ];
+      const calendar = document.getElementById('calendar');
+      const calendarDaysEl = calendar.querySelector('tbody');
+      const calendarDateCells = calendarDaysEl.querySelectorAll('td');
+      const calendarDaysNameCells = calendar.querySelectorAll('th');
+      const calendarMonthesEl = calendar.querySelector('#monthes');
+      const calendarMonthes = calendarMonthesEl.querySelectorAll('li');
+      const inputRentStart = document.querySelector('#rentStart');
+      const inputRentEnd = document.querySelector('#rentEnd');
+      const dateResetBtn = document.querySelector('#dateReset');
+      const dateAcceptBtn = document.querySelector('#dateAccept');
+
+      const currentTime = Date.now();
+
+      let currentDayTime = '';
+      let activeTime = '';
+      let startTime = '';
+      let endTime = '';
+
+      setCurrentDateTime();
+      setCalendarDaysNames();
+
+      setCalendarActiveDate(currentTime);
+      setCalendarDates(activeTime);
+      setCalendarMonthes(activeTime);
+
+      function setCurrentDateTime() {
+        const date = new Date();
+        const currentYear = date.getFullYear();
+        const currentMonth = date.getMonth();
+        const currentDay = date.getDay();
+        const currentDate = new Date(currentYear, currentMonth + 1, currentDay);
+
+        currentDayTime = currentDate.getTime();
+      }
+
+      function setCalendarDaysNames() {
+        calendarDaysNameCells.forEach(
+          (el, index) => (el.textContent = days[index])
+        );
+      }
+
+      function setCalendarActiveDate(time) {
+        const date = new Date(time);
+        const activeYear = date.getFullYear();
+        const activeMonth = date.getMonth();
+        const activeFirstMonthDay = new Date(activeYear, activeMonth, 1);
+
+        activeTime = activeFirstMonthDay.getTime();
+      }
+
+      function setCalendarDates(time) {
+        calendarDateCells.forEach((cell) => {
+          cell.textContent = '';
+          cell.classList = '';
+        });
+
+        const date = new Date(time);
+
+        // active month
+        const activeMonth = date.getMonth();
+        const activeYear = date.getFullYear();
+        const activeMonthFirstDayIndex = date.getDay();
+        const activeMonthLastDay = new Date(activeYear, activeMonth + 1, 0);
+        const activeMonthLastDayTime = activeMonthLastDay.getTime();
+        const activeMonthDaysQuantity = activeMonthLastDay.getDate();
+
+        for (let i = 1; i <= activeMonthDaysQuantity; i++) {
+          calendarDateCells[activeMonthFirstDayIndex - 1 + i].textContent = i;
+          calendarDateCells[activeMonthFirstDayIndex - 1 + i].setAttribute(
+            'data-time',
+            `${time + (i - 1) * DAY}`
+          );
+        }
+
+        // prev month
+        const prevMonthLastDay = new Date(activeYear, activeMonth, 0);
+        const prevMonthLastDayTime = prevMonthLastDay.getTime();
+        const prevMonthDaysQuantity = prevMonthLastDay.getDate();
+
+        //add prev month days
+        for (let i = activeMonthFirstDayIndex - 1, j = 0; i >= 0; i--, j++) {
+          calendarDateCells[i].textContent = prevMonthDaysQuantity - j;
+          calendarDateCells[i].setAttribute(
+            'data-time',
+            `${time - DAY * (j + 1)}`
+          );
+        }
+
+        //next month
+        const nextMonthfirstDayIndex =
+          activeMonthFirstDayIndex + activeMonthDaysQuantity + 1;
+        const nextMonthfirstDayDate = new Date(activeYear, activeMonth + 1, 1);
+        const nextMonthfirstDayTime = nextMonthfirstDayDate.getTime();
+        const nextMonthDaysQuantity = 7 * 6 - nextMonthfirstDayIndex + 1;
+
+        //add next month days
+        for (let i = 1; i <= nextMonthDaysQuantity; i++) {
+          calendarDateCells[nextMonthfirstDayIndex - 1 + i - 1].textContent = i;
+
+          calendarDateCells[nextMonthfirstDayIndex - 1 + i - 1].setAttribute(
+            'data-time',
+            nextMonthfirstDayTime + (-1 + i) * DAY
+          );
+        }
+
+        //mark current day dates
+        calendarDateCells.forEach((cell) => {
+          if (+cell.getAttribute('data-time') === currentDayTime) {
+            cell.className = 'current';
+          }
+
+          if (cell.getAttribute('data-time') < currentDayTime) {
+            cell.className = 'past';
+          }
+        });
+      }
+
+      function setCalendarMonthes(time) {
+        const date = new Date(time);
+        const month = date.getMonth();
+        const year = date.getFullYear();
+
+        const activeMonth = month;
+        let monthList = [];
+
+        if (month < 4) {
+          monthNamesSort
+            .slice(-4 + month)
+            .map((m) => monthList.push([m, year - 1]));
+
+          monthNamesSort
+            .slice(0, month + 5)
+            .map((m) => monthList.push([m, year]));
+
+          // monthList = [
+          //   ...monthNamesSort.slice(-4 + month),
+          //   ...monthNamesSort.slice(0, month + 5),
+          // ];
+        }
+
+        if (month >= 4 && month < 8) {
+          monthNamesSort
+            .slice(month - 4, month + 5)
+            .map((m) => monthList.push([m, year]));
+
+          // monthList = [...monthNamesSort.slice(month - 4, month + 5)];
+        }
+
+        if (month >= 8) {
+          monthNamesSort
+            .slice(-(monthNamesSort.length - month + 4))
+            .map((m) => monthList.push([m, year]));
+
+          monthNamesSort
+            .slice(0, month + 5 - monthNamesSort.length)
+            .map((m) => monthList.push([m, +year + 1]));
+
+          // monthList = [
+          //   ...monthNamesSort.slice(-(monthNamesSort.length - month + 4)),
+          //   ...monthNamesSort.slice(0, month + 5 - monthNamesSort.length),
+          // ];
+        }
+
+        calendarMonthes.forEach((el, i) => {
+          el.textContent = monthList[i][0];
+          el.setAttribute('data-date-year', monthList[i][1]);
+        });
+      }
+
+      function handleDayClick(el) {
+        const currentElementTime = +el.target.getAttribute('data-time');
+
+        if (currentElementTime < currentDayTime) {
+          return;
+        }
+
+        if (startTime && endTime) {
+          resetCalendar();
+        }
+
+        if (startTime && !endTime) {
+          if (currentElementTime <= startTime) {
+            calendarDaysEl
+              .querySelector('.selected--start')
+              .classList.remove('selected--start');
+
+            el.target.classList.add('selected--start');
+
+            startTime = +currentElementTime;
+
+            return;
+          }
+
+          el.target.classList.add('selected--end');
+
+          endTime = +currentElementTime;
+
+          calendarDaysEl.querySelectorAll('td').forEach((cell) => {
+            if (
+              cell.getAttribute('data-time') > startTime &&
+              cell.getAttribute('data-time') < endTime
+            ) {
+              cell.classList.add('selected--average');
+            }
+          });
+
+          return;
+        }
+
+        if (!startTime && !endTime) {
+          el.target.classList.add('selected--start');
+
+          startTime = +currentElementTime;
+          const date = new Date(startTime);
+
+          inputRentStart.textContent = `${date.getDay()} ${
+            monthNamesFull[date.getMonth()]
+          }`;
+
+          return;
+        }
+      }
+
+      function handleMonthClick(el) {
+        const month = monthNamesSort.findIndex(
+          (item) => item === el.target.textContent
+        );
+        const year = el.target.getAttribute('data-date-year');
+        const date = new Date(year, month);
+        const time = date.getTime();
+
+        setCalendarActiveDate(time);
+        setCalendarDates(time);
+        setCalendarMonthes(time);
+      }
+
+      function resetCalendar() {
+        calendarDaysEl
+          .querySelector('.selected--start')
+          ?.classList.remove('selected--start');
+
+        calendarDaysEl
+          .querySelector('.selected--end')
+          ?.classList.remove('selected--end');
+
+        calendarDaysEl
+          .querySelectorAll('.selected--average')
+          .forEach((el) => el.classList.remove('selected--average'));
+
+        startTime = '';
+        endTime = '';
+      }
+
+      function handleAcceptBtnClick() {
+        const date = new Date(endTime);
+
+        inputRentEnd.textContent = `${date.getDay()} ${
+          monthNamesFull[date.getMonth()]
+        }`;
+      }
+
+      calendarMonthesEl.addEventListener('click', handleMonthClick);
+      calendarDaysEl.addEventListener('click', handleDayClick);
+      dateResetBtn.addEventListener('click', resetCalendar);
+      dateAcceptBtn.addEventListener('click', handleAcceptBtnClick);
+    </script>
   </body>
 </html>
