@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/search.min.css" />
+    <link rel="stylesheet" href="./css/search.min.css" />
   </head>
   <body>
     <header class="header">
@@ -1047,9 +1047,9 @@
     </dialog>
 
     <script>
-      document.querySelector('dialog').showModal();
+      document.querySelector("dialog").showModal();
       document.querySelectorAll('input[type="date"]').forEach((el) =>
-        el.addEventListener('click', function (event) {
+        el.addEventListener("click", function (event) {
           event.preventDefault();
         })
       );
@@ -1057,52 +1057,52 @@
       //calendar
       const DAY = 24 * 60 * 60 * 1000;
 
-      const days = ['Nie', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'];
+      const days = ["Nie", "Pon", "Wt", "Śr", "Czw", "Pt", "Sob"];
       const monthNamesSort = [
-        'Sty',
-        'Lut',
-        'Marz',
-        'Kwie',
-        'Maj',
-        'Czw',
-        'Lip',
-        'Sie',
-        'Wrz',
-        'Paź',
-        'Lis',
-        'Gru',
+        "Sty",
+        "Lut",
+        "Marz",
+        "Kwie",
+        "Maj",
+        "Czw",
+        "Lip",
+        "Sie",
+        "Wrz",
+        "Paź",
+        "Lis",
+        "Gru",
       ];
       const monthNamesFull = [
-        'Styczeń',
-        'Luty',
-        'Marzec',
-        'Kwiecień',
-        'Maj',
-        'Czerwiec',
-        'Lipiec',
-        'Sierpień',
-        'Wrzesień',
-        'Październik',
-        'Listopad',
-        'Grudzień',
+        "Styczeń",
+        "Luty",
+        "Marzec",
+        "Kwiecień",
+        "Maj",
+        "Czerwiec",
+        "Lipiec",
+        "Sierpień",
+        "Wrzesień",
+        "Październik",
+        "Listopad",
+        "Grudzień",
       ];
-      const calendar = document.getElementById('calendar');
-      const calendarDaysEl = calendar.querySelector('tbody');
-      const calendarDateCells = calendarDaysEl.querySelectorAll('td');
-      const calendarDaysNameCells = calendar.querySelectorAll('th');
-      const calendarMonthesEl = calendar.querySelector('#monthes');
-      const calendarMonthes = calendarMonthesEl.querySelectorAll('li');
-      const inputRentStart = document.querySelector('#rentStart');
-      const inputRentEnd = document.querySelector('#rentEnd');
-      const dateResetBtn = document.querySelector('#dateReset');
-      const dateAcceptBtn = document.querySelector('#dateAccept');
+      const calendar = document.getElementById("calendar");
+      const calendarDaysEl = calendar.querySelector("tbody");
+      const calendarDateCells = calendarDaysEl.querySelectorAll("td");
+      const calendarDaysNameCells = calendar.querySelectorAll("th");
+      const calendarMonthesEl = calendar.querySelector("#monthes");
+      const calendarMonthes = calendarMonthesEl.querySelectorAll("li");
+      const inputRentStart = document.querySelector("#rentStart");
+      const inputRentEnd = document.querySelector("#rentEnd");
+      const dateResetBtn = document.querySelector("#dateReset");
+      const dateAcceptBtn = document.querySelector("#dateAccept");
 
       const currentTime = Date.now();
 
-      let currentDayTime = '';
-      let activeTime = '';
-      let startTime = '';
-      let endTime = '';
+      let currentDayTime = "";
+      let activeTime = "";
+      let startTime = "";
+      let endTime = "";
 
       setCurrentDateTime();
       setCalendarDaysNames();
@@ -1138,8 +1138,8 @@
 
       function setCalendarDates(time) {
         calendarDateCells.forEach((cell) => {
-          cell.textContent = '';
-          cell.classList = '';
+          cell.textContent = "";
+          cell.classList = "";
         });
 
         const date = new Date(time);
@@ -1155,7 +1155,7 @@
         for (let i = 1; i <= activeMonthDaysQuantity; i++) {
           calendarDateCells[activeMonthFirstDayIndex - 1 + i].textContent = i;
           calendarDateCells[activeMonthFirstDayIndex - 1 + i].setAttribute(
-            'data-time',
+            "data-time",
             `${time + (i - 1) * DAY}`
           );
         }
@@ -1169,7 +1169,7 @@
         for (let i = activeMonthFirstDayIndex - 1, j = 0; i >= 0; i--, j++) {
           calendarDateCells[i].textContent = prevMonthDaysQuantity - j;
           calendarDateCells[i].setAttribute(
-            'data-time',
+            "data-time",
             `${time - DAY * (j + 1)}`
           );
         }
@@ -1186,19 +1186,19 @@
           calendarDateCells[nextMonthfirstDayIndex - 1 + i - 1].textContent = i;
 
           calendarDateCells[nextMonthfirstDayIndex - 1 + i - 1].setAttribute(
-            'data-time',
+            "data-time",
             nextMonthfirstDayTime + (-1 + i) * DAY
           );
         }
 
         //mark current day dates
         calendarDateCells.forEach((cell) => {
-          if (+cell.getAttribute('data-time') === currentDayTime) {
-            cell.className = 'current';
+          if (+cell.getAttribute("data-time") === currentDayTime) {
+            cell.className = "current";
           }
 
-          if (cell.getAttribute('data-time') < currentDayTime) {
-            cell.className = 'past';
+          if (cell.getAttribute("data-time") < currentDayTime) {
+            cell.className = "past";
           }
         });
       }
@@ -1251,12 +1251,12 @@
 
         calendarMonthes.forEach((el, i) => {
           el.textContent = monthList[i][0];
-          el.setAttribute('data-date-year', monthList[i][1]);
+          el.setAttribute("data-date-year", monthList[i][1]);
         });
       }
 
       function handleDayClick(el) {
-        const currentElementTime = +el.target.getAttribute('data-time');
+        const currentElementTime = +el.target.getAttribute("data-time");
 
         if (currentElementTime < currentDayTime) {
           return;
@@ -1269,26 +1269,26 @@
         if (startTime && !endTime) {
           if (currentElementTime <= startTime) {
             calendarDaysEl
-              .querySelector('.selected--start')
-              .classList.remove('selected--start');
+              .querySelector(".selected--start")
+              .classList.remove("selected--start");
 
-            el.target.classList.add('selected--start');
+            el.target.classList.add("selected--start");
 
             startTime = +currentElementTime;
 
             return;
           }
 
-          el.target.classList.add('selected--end');
+          el.target.classList.add("selected--end");
 
           endTime = +currentElementTime;
 
-          calendarDaysEl.querySelectorAll('td').forEach((cell) => {
+          calendarDaysEl.querySelectorAll("td").forEach((cell) => {
             if (
-              cell.getAttribute('data-time') > startTime &&
-              cell.getAttribute('data-time') < endTime
+              cell.getAttribute("data-time") > startTime &&
+              cell.getAttribute("data-time") < endTime
             ) {
-              cell.classList.add('selected--average');
+              cell.classList.add("selected--average");
             }
           });
 
@@ -1296,7 +1296,7 @@
         }
 
         if (!startTime && !endTime) {
-          el.target.classList.add('selected--start');
+          el.target.classList.add("selected--start");
 
           startTime = +currentElementTime;
           const date = new Date(startTime);
@@ -1313,7 +1313,7 @@
         const month = monthNamesSort.findIndex(
           (item) => item === el.target.textContent
         );
-        const year = el.target.getAttribute('data-date-year');
+        const year = el.target.getAttribute("data-date-year");
         const date = new Date(year, month);
         const time = date.getTime();
 
@@ -1324,19 +1324,19 @@
 
       function resetCalendar() {
         calendarDaysEl
-          .querySelector('.selected--start')
-          ?.classList.remove('selected--start');
+          .querySelector(".selected--start")
+          ?.classList.remove("selected--start");
 
         calendarDaysEl
-          .querySelector('.selected--end')
-          ?.classList.remove('selected--end');
+          .querySelector(".selected--end")
+          ?.classList.remove("selected--end");
 
         calendarDaysEl
-          .querySelectorAll('.selected--average')
-          .forEach((el) => el.classList.remove('selected--average'));
+          .querySelectorAll(".selected--average")
+          .forEach((el) => el.classList.remove("selected--average"));
 
-        startTime = '';
-        endTime = '';
+        startTime = "";
+        endTime = "";
       }
 
       function handleAcceptBtnClick() {
@@ -1347,10 +1347,10 @@
         }`;
       }
 
-      calendarMonthesEl.addEventListener('click', handleMonthClick);
-      calendarDaysEl.addEventListener('click', handleDayClick);
-      dateResetBtn.addEventListener('click', resetCalendar);
-      dateAcceptBtn.addEventListener('click', handleAcceptBtnClick);
+      calendarMonthesEl.addEventListener("click", handleMonthClick);
+      calendarDaysEl.addEventListener("click", handleDayClick);
+      dateResetBtn.addEventListener("click", resetCalendar);
+      dateAcceptBtn.addEventListener("click", handleAcceptBtnClick);
     </script>
   </body>
 </html>
