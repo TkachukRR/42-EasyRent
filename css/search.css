@@ -1036,7 +1036,7 @@ svg {
   border-color: transparent;
 }
 .popup__body .product .sub-info .rate meter::-webkit-meter-bar, .popup__body .product .sub-info .rate meter::-webkit-meter-optimum-value {
-  mask: url("/images/star.svg");
+  mask: url("./images/star.svg");
   mask-size: 1rem;
   mask-repeat: repeat-x;
 }
