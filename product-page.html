@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyRent - Product Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/product-page.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="container">
+        <a href="/index.html" class="logo">EasyRent</a>
+        <ul class="navigation">
+          <li class="navigation__item">
+            <a href="#" class="btn cart">
+              <svg class="icon" height="24" width="24">
+                <use xlink:href="images/icons.svg#icon-cart"></use>
+              </svg>
+              <div class="cart__counter">2</div>
+            </a>
+          </li>
+          <li class="navigation__item"><a href="#" class="btn">zaloguj</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="content">
+          <section class="product">
+            <div class="product__gallery gallery">
+              <ul class="gallery__side">
+                <li class="image">
+                  <label class="image__container">
+                    <input
+                      type="radio"
+                      name="gallery-radio"
+                      class="image__radio"
+                      checked
+                    />
+                    <img
+                      class="img"
+                      src="./images/product.webp"
+                      alt="product"
+                      width="99"
+                      height="88"
+                    />
+                  </label>
+                </li>
+
+                <li class="image">
+                  <label class="image__container">
+                    <input
+                      type="radio"
+                      name="gallery-radio"
+                      class="image__radio"
+                    />
+                    <img
+                      class="img"
+                      src="./images/img-2.webp"
+                      alt="product"
+                      width="99"
+                      height="88"
+                    />
+                  </label>
+                </li>
+
+                <li class="image">
+                  <label class="image__container">
+                    <input
+                      type="radio"
+                      name="gallery-radio"
+                      class="image__radio"
+                    />
+                    <img
+                      class="img"
+                      src="./images/img-3.webp"
+                      alt="product"
+                      width="99"
+                      height="88"
+                    />
+                  </label>
+                </li>
+
+                <li class="image">
+                  <label class="image__container">
+                    <input
+                      type="radio"
+                      name="gallery-radio"
+                      class="image__radio"
+                    />
+                    <img
+                      class="img"
+                      ß
+                      src="./images/img-4.webp"
+                      alt="product"
+                      width="99"
+                      height="88"
+                    />
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="product__shop shop">
+              <div class="card">
+                <div class="card__header">
+                  <h3 class="shop__title">Orbisfera</h3>
+                  <span class="shop__remoteness">+8km</span>
+                </div>
+                <address class="shop__location">Ul. Górska 17/ 4</address>
+                <div class="shop__schedule">
+                  <table class="schedule">
+                    <caption class="schedule__title">
+                      Godziny otwarcia:
+                    </caption>
+                    <tr class="schedule__row">
+                      <th class="schedule__item-name">Pon-pt</th>
+                      <td class="schedule__item-value">11:00-20:00</td>
+                    </tr>
+                    <tr class="schedule__row">
+                      <th class="schedule__item-name">Sob</th>
+                      <td class="schedule__item-value">12:00-18:00</td>
+                    </tr>
+                    <tr class="schedule__row">
+                      <th class="schedule__item-name">Niedz.</th>
+                      <td class="schedule__item-value">Nieczynne</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <div class="shop__map">
+                <div id="map"></div>
+              </div>
+            </div>
+
+            <div class="product__specification">
+              <table class="specification">
+                <caption class="specification__title">
+                  Specyfikacja
+                </caption>
+                <thead class="specification__header">
+                  <tr>
+                    <th class="tab"><div class="content">M</div></th>
+                    <th class="tab"><div class="content">L</div></th>
+                    <th class="tab"><div class="content">XL</div></th>
+                  </tr>
+                </thead>
+                <tbody class="specification__body">
+                  <tr>
+                    <td class="tab">
+                      <div class="content">
+                        Nadaje się do rozmiaru buta
+                        <div class="size">34-40</div>
+                      </div>
+                    </td>
+                    <td class="tab">
+                      <div class="content">
+                        Nadaje się do rozmiaru buta
+                        <div class="size">40-44</div>
+                      </div>
+                    </td>
+                    <td class="tab">
+                      <div class="content">
+                        Nadaje się do rozmiaru buta
+                        <div class="size">44-48</div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="product__description description">
+              <h3 class="description__title">Wygodny i praktyczny</h3>
+              <p class="description__text">
+                Idealny wybór dla tych, którzy chcą cieszyć się wygodną i
+                stylową jazdą po mieście. Bez względu na to, czy jest to
+                codzienny dojazd do pracy, czy relaksująca przejażdżka po parku,
+                ten rower zapewnia nie tylko komfort, ale także wydajność
+                potrzebną do pokonania każdej trasy.
+                <span class="description__text--accent"
+                  >Zaprojektowany z myślą o miejskim środowisku, łączy w sobie
+                  ergonomiczną geometrię ramy z wygodnym siodłem i regulowanym
+                  kierownicą, zapewniając nie tylko komfortową pozycję podczas
+                  jazdy, ale także łatwą kontrolę i manewrowanie w gęstym ruchu
+                  ulicznym.
+                </span>
+              </p>
+            </div>
+          </section>
+        </div>
+        <aside class="side">
+          <section class="order">
+            <div class="order__header">
+              <h2 class="order__product-title">Rower miejski</h2>
+              <div class="order__product-recommendation">
+                <svg class="icon" height="16" width="16">
+                  <use xlink:href="images/icons.svg#icon-chat-heart"></use>
+                </svg>
+                7 użytkowników poleciło ten produkt
+              </div>
+              <div class="order__product-shop product-shop">
+                <h3 class="product-shop__name">Orbisfera</h3>
+                <div class="product-shop__info">
+                  <label class="product-shop__rating rating">
+                    <meter title="star" value="4.5" min="0" max="5">5/5</meter>
+                    5/5
+                  </label>
+                  <ul class="product-shop__links">
+                    <li class="product-shop__nav-link">
+                      <a href="#" class="link">Zobacz opinie (17)</a>
+                    </li>
+                    <li class="product-shop__nav-link">
+                      <a href="#" class="link">Odwiedź wypożyczalnię </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="order__main">
+              <div class="order__product-form">
+                <div class="order__calendar">calendar</div>
+                <form action="" class="form">
+                  <div class="form__item quantity">
+                    <label for="productSizeM" class="quantity__label"
+                      >Rozmiar M</label
+                    >
+                    <div class="quantity__value value">
+                      <button
+                        type="button"
+                        class="value__control"
+                        onclick="productSizeM.stepDown()"
+                        title="Decrease value"
+                        aria-label="Decrease value"
+                      >
+                        <svg width="25" height="24" viewBox="0 0 25 24">
+                          <path d="M5.5 11V13H19.5V11H5.5Z"></path>
+                        </svg>
+                      </button>
+                      <input
+                        class="value__input"
+                        type="number"
+                        name="quantity"
+                        id="productSizeM"
+                        value="1"
+                        min="0"
+                      />
+                      <button
+                        type="button"
+                        class="value__control"
+                        onclick="productSizeM.stepUp()"
+                        title="Increase value"
+                        aria-label="Increase value"
+                      >
+                        <svg width="25" height="24" viewBox="0 0 25 24">
+                          <path
+                            d="M11.5 11V5H13.5V11H19.5V13H13.5V19H11.5V13H5.5V11H11.5Z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="form__item quantity">
+                    <label for="productSizeL" class="quantity__label"
+                      >Rozmiar L</label
+                    >
+                    <div class="quantity__value value">
+                      <button
+                        type="button"
+                        class="value__control"
+                        onclick="productSizeL.stepDown()"
+                        title="Decrease value"
+                        aria-label="Decrease value"
+                      >
+                        <svg width="25" height="24" viewBox="0 0 25 24">
+                          <path d="M5.5 11V13H19.5V11H5.5Z"></path>
+                        </svg>
+                      </button>
+                      <input
+                        class="value__input"
+                        type="number"
+                        name="quantity"
+                        id="productSizeL"
+                        value="0"
+                        min="0"
+                      />
+                      <button
+                        type="button"
+                        class="value__control"
+                        onclick="productSizeL.stepUp()"
+                        title="Increase value"
+                        aria-label="Increase value"
+                      >
+                        <svg width="25" height="24" viewBox="0 0 25 24">
+                          <path
+                            d="M11.5 11V5H13.5V11H19.5V13H13.5V19H11.5V13H5.5V11H11.5Z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="form__item quantity">
+                    <label for="productSizeXL" class="quantity__label"
+                      >Rozmiar XL</label
+                    >
+                    <div class="quantity__value value">
+                      <button
+                        type="button"
+                        class="value__control"
+                        onclick="productSizeXL.stepDown()"
+                        title="Decrease value"
+                        aria-label="Decrease value"
+                      >
+                        <svg width="25" height="24" viewBox="0 0 25 24">
+                          <path d="M5.5 11V13H19.5V11H5.5Z"></path>
+                        </svg>
+                      </button>
+                      <input
+                        class="value__input"
+                        type="number"
+                        name="quantity"
+                        id="productSizeXL"
+                        value="0"
+                        min="0"
+                      />
+                      <button
+                        type="button"
+                        class="value__control"
+                        onclick="productSizeXL.stepUp()"
+                        title="Increase value"
+                        aria-label="Increase value"
+                      >
+                        <svg width="25" height="24" viewBox="0 0 25 24">
+                          <path
+                            d="M11.5 11V5H13.5V11H19.5V13H13.5V19H11.5V13H5.5V11H11.5Z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="order__totals totals">
+                <h4 class="totals__title">Podsumowanie</h4>
+                <div class="totals__period">
+                  Termin wynajmu
+                  <span class="period">
+                    <span>25 marzec</span>
+                    -
+                    <spa>27 marzec</spa>
+                  </span>
+                </div>
+                <div class="totals__quantity">
+                  Ilość
+                  <span class="quantity">
+                    <span>M</span>
+                    x
+                    <spa>1</spa>
+                  </span>
+                </div>
+                <div class="totals__result">
+                  Całkowity koszt
+                  <span class="value">370,00</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="order__footer">
+              <button type="submit" class="form-submit">
+                Dodaj do koszyka
+              </button>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <div class="container">
+        <section class="opinions">
+          <div class="opinions__header">
+            <h3 class="opinions__title">Opinie klientów</h3>
+            <label class="opinions__more" for="more">Zobacz opinie (17) </label>
+          </div>
+          <input type="checkbox" name="show-more" id="more" />
+          <ul class="opinions__list">
+            <li class="opinions__item opinion">
+              <label class="opinion__rating rating">
+                <meter title="star" value="5" min="0" max="5">5/5</meter>
+                5/5
+              </label>
+              <p class="opinion__text">
+                Fantastyczne doświadczenie z wypożyczalnią rowerów! Rower był w
+                doskonałym stanie, obsługa była bardzo przyjazna i pomocna!
+              </p>
+              <p class="opinion__author">Jarosław Wolny</p>
+              <time class="opinion__date">29.01.2024</time>
+            </li>
+            <li class="opinions__item opinion">
+              <label class="opinion__rating rating">
+                <meter title="star" value="5" min="0" max="5">5/5</meter>
+                5/5
+              </label>
+              <p class="opinion__text">
+                Fantastyczne doświadczenie z wypożyczalnią rowerów! Rower był w
+                doskonałym stanie, obsługa była bardzo przyjazna i pomocna!
+              </p>
+              <p class="opinion__author">Jarosław Wolny</p>
+              <time class="opinion__date">29.01.2024</time>
+            </li>
+            <li class="opinions__item opinion">
+              <label class="opinion__rating rating">
+                <meter title="star" value="5" min="0" max="5">5/5</meter>
+                5/5
+              </label>
+              <p class="opinion__text">
+                Fantastyczne doświadczenie z wypożyczalnią rowerów! Rower był w
+                doskonałym stanie, obsługa była bardzo przyjazna i pomocna!
+              </p>
+              <p class="opinion__author">Jarosław Wolny</p>
+              <time class="opinion__date">29.01.2024</time>
+            </li>
+            <li class="opinions__item opinion">
+              <label class="opinion__rating rating">
+                <meter title="star" value="5" min="0" max="5">5/5</meter>
+                5/5
+              </label>
+              <p class="opinion__text">
+                Fantastyczne doświadczenie z wypożyczalnią rowerów! Rower był w
+                doskonałym stanie, obsługa była bardzo przyjazna i pomocna!
+              </p>
+              <p class="opinion__author">Jarosław Wolny</p>
+              <time class="opinion__date">29.01.2024</time>
+            </li>
+            <li class="opinions__item opinion">
+              <label class="opinion__rating rating">
+                <meter title="star" value="5" min="0" max="5">5/5</meter>
+                5/5
+              </label>
+              <p class="opinion__text">
+                Fantastyczne doświadczenie z wypożyczalnią rowerów! Rower był w
+                doskonałym stanie, obsługa była bardzo przyjazna i pomocna!
+              </p>
+              <p class="opinion__author">Jarosław Wolny</p>
+              <time class="opinion__date">29.01.2024</time>
+            </li>
+            <li class="opinions__item opinion">
+              <label class="opinion__rating rating">
+                <meter title="star" value="5" min="0" max="5">5/5</meter>
+                5/5
+              </label>
+              <p class="opinion__text">
+                Fantastyczne doświadczenie z wypożyczalnią rowerów! Rower był w
+                doskonałym stanie, obsługa była bardzo przyjazna i pomocna!
+              </p>
+              <p class="opinion__author">Jarosław Wolny</p>
+              <time class="opinion__date">29.01.2024</time>
+            </li>
+            <li class="opinions__item opinion">
+              <label class="opinion__rating rating">
+                <meter title="star" value="5" min="0" max="5">5/5</meter>
+                5/5
+              </label>
+              <p class="opinion__text">
+                Fantastyczne doświadczenie z wypożyczalnią rowerów! Rower był w
+                doskonałym stanie, obsługa była bardzo przyjazna i pomocna!
+              </p>
+              <p class="opinion__author">Jarosław Wolny</p>
+              <time class="opinion__date">29.01.2024</time>
+            </li>
+            <li class="opinions__item opinion">
+              <label class="opinion__rating rating">
+                <meter title="star" value="5" min="0" max="5">5/5</meter>
+                5/5
+              </label>
+              <p class="opinion__text">
+                Fantastyczne doświadczenie z wypożyczalnią rowerów! Rower był w
+                doskonałym stanie, obsługa była bardzo przyjazna i pomocna!
+              </p>
+              <p class="opinion__author">Jarosław Wolny</p>
+              <time class="opinion__date">29.01.2024</time>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="container container--more">
+        <section class="more-products">
+          <h3 class="more-products__title">
+            Więcej od Orbiswera<a href="#" class="more">Zobacz wszystko (17)</a>
+          </h3>
+          <ul class="more-products__list">
+            <li class="more-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="more-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="more-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="more-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="more-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="more-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="more-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="container container--more">
+        <section class="other-products">
+          <h3 class="other-products__title">Inni przeglądali również</h3>
+          <ul class="other-products__list">
+            <li class="other-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="other-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="other-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="other-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="other-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="other-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="other-products__item">
+              <div class="product-card product-card--more">
+                <div class="product-card__main product-card__main--more">
+                  <div class="image image--more">
+                    <img
+                      src="./images/product.webp"
+                      alt="product"
+                      width="358"
+                      height="385"
+                    />
+                  </div>
+
+                  <div class="content-wrapper">
+                    <div class="title title--more">
+                      <h2 class="title__text">Rower Miejski</h2>
+                      <a href="#" class="title__btn btn">
+                        <svg class="icon" height="24" width="24">
+                          <use xlink:href="images/icons.svg#icon-cart"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="available available--more">
+                      <div class="available__info">
+                        Najbliższa rezerwacja:
+                        <span class="available__date available__date--more"
+                          >27 styczeń</span
+                        >
+                      </div>
+                      <div class="available__distance">+8km</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card__footer">
+                  <div class="sides sides--more">
+                    <div class="sides__left">
+                      <div class="price">
+                        185zł
+                        <span class="price__period"> / za 1 dzień</span>
+                      </div>
+                    </div>
+                    <div class="sides__right">
+                      <a href="#" class="btn btn--more">Zarezerwuj</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <nav class="container">
+        <ul class="navi">
+          <li class="navi__item">
+            <h3 class="title">Informacje</h3>
+            <ul class="list">
+              <li><a class="link" href="#">Pytania</a></li>
+              <li><a class="link" href="#">Płatności</a></li>
+              <li><a class="link" href="#">Reklamacja</a></li>
+            </ul>
+          </li>
+
+          <li class="navi__item">
+            <h3 class="title">Regulaminy</h3>
+            <ul class="list">
+              <li><a class="link" href="#">Polityka prywatności</a></li>
+              <li><a class="link" href="#">Regulamin</a></li>
+            </ul>
+          </li>
+
+          <li class="navi__item">
+            <h3 class="title">Kontakt</h3>
+            <ul class="list">
+              <li><a class="link" href="#">O nas</a></li>
+              <li><a class="link" href="#">Kontakt</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="/index.html" class="logo">EasyRent</a>
+      </nav>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      var map = L.map('map').setView([50.4501, 30.5234], 13);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      var marker = L.marker([50.4501, 30.5234])
+        .addTo(map)
+        .bindPopup('Shop: Orbisfera.')
+        .openPopup();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+.opinion {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #363644;
+
+  &__rating {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+  }
+
+  &__author {
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  &__date {
+    font-weight: 600;
+    line-height: 24px;
+    color: #82829b;
+  }
+}

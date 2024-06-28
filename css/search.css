@@ -253,6 +253,35 @@ svg {
   justify-content: space-between;
   align-items: center;
 }
+.header .cart {
+  position: relative;
+  padding: 13.5px !important;
+  display: inline-block;
+}
+.header .cart__active {
+  background-color: #6f6dff;
+  border-radius: 8px;
+}
+.header .cart__counter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+  color: #24242c;
+  font-family: Source Sans Pro;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(25%) translateY(25%);
+}
+
 .main {
   flex: 1;
   background-color: #ffffff;
@@ -624,11 +653,27 @@ svg {
   }
 }
 
+.product-card__main .available__distance {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #e6e6fc;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
 .product-card {
   padding: 4px 8px;
   background: #fafafa;
   border-radius: 8px;
   overflow: hidden;
+}
+.product-card--more {
+  border-radius: 4px;
+  padding: 8px;
+  background: #fafafa;
 }
 @media screen and (min-width: 1024px) {
   .product-card {
@@ -641,6 +686,10 @@ svg {
     gap: 16px;
     padding-bottom: 8px;
   }
+  .product-card__main--more {
+    display: block;
+    padding: 0;
+  }
 }
 .product-card__main .image {
   border-radius: 8px;
@@ -649,11 +698,27 @@ svg {
   width: 119px;
   height: 150px;
 }
+.product-card__main .image--more {
+  border-radius: 4px;
+  width: 332px;
+  margin-bottom: 8px;
+  height: 360px;
+}
+@media screen and (min-width: 768px) {
+  .product-card__main .image--more {
+    width: 358px;
+    height: 385px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .product-card__main .image {
     width: 484px;
     height: 216px;
     margin-bottom: 8px;
+  }
+  .product-card__main .image--more {
+    width: 358px;
+    height: 385px;
   }
 }
 .product-card__main .image img {
@@ -670,10 +735,17 @@ svg {
   justify-content: space-between;
   align-items: center;
 }
+.product-card__main .title--more {
+  padding: 0 8px;
+  margin-bottom: 8px;
+}
 @media screen and (min-width: 1024px) {
   .product-card__main .title {
     padding: 0 8px;
     margin-bottom: 8px;
+  }
+  .product-card__main .title--more {
+    margin: 0;
   }
 }
 .product-card__main .title__text {
@@ -705,6 +777,12 @@ svg {
   flex-direction: column;
   margin-bottom: 12px;
 }
+.product-card__main .available--more {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 8px;
+  margin-bottom: 16px;
+}
 @media screen and (min-width: 1024px) {
   .product-card__main .available {
     flex-direction: row;
@@ -715,6 +793,9 @@ svg {
     color: #6d6d88;
     line-height: 20px;
   }
+  .product-card__main .available--more {
+    justify-content: space-between;
+  }
 }
 .product-card__main .available__date {
   color: #363644;
@@ -722,6 +803,9 @@ svg {
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.32px;
+}
+.product-card__main .available__date--more {
+  font-weight: 400;
 }
 .product-card__main .info {
   display: flex;
@@ -796,6 +880,9 @@ svg {
   display: flex;
   justify-content: space-between;
 }
+.product-card__footer .sides--more {
+  align-items: end;
+}
 @media screen and (min-width: 1024px) {
   .product-card__footer .sides {
     align-items: end;
@@ -839,6 +926,19 @@ svg {
     display: none;
   }
 }
+.product-card__footer .sides__left .price {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.product-card__footer .sides__left .price__period {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #6d6d88;
+}
 .product-card__footer .sides__right .btn {
   color: #1d2a58;
   text-align: center;
@@ -849,6 +949,16 @@ svg {
   border-radius: 32px;
   border: 1px solid #1d2a58;
   background: #ffffff;
+}
+.product-card__footer .sides__right .btn--more {
+  padding: 8px 24px;
+  border-radius: 8px;
+  background: #6f6dff;
+  box-shadow: 0px 4px 16px 0px rgba(36, 36, 44, 0.2);
+  border: none;
+  color: #efeff0;
+  font-size: 16px;
+  line-height: 32px;
 }
 @media screen and (min-width: 1024px) {
   .product-card__footer .sides__right .btn {

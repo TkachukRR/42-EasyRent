@@ -1,8 +1,16 @@
+@import '../components/distance-info';
+
 .product-card {
   padding: 4px 8px;
   background: $bg-color-quaternary;
   border-radius: 8px;
   overflow: hidden;
+
+  &--more {
+    border-radius: 4px;
+    padding: 8px;
+    background: #fafafa;
+  }
 
   @media screen and (min-width: $desktop) {
     padding: 8px;
@@ -13,6 +21,11 @@
       display: flex;
       gap: 16px;
       padding-bottom: 8px;
+
+      &--more {
+        display: block;
+        padding: 0;
+      }
     }
 
     .image {
@@ -22,10 +35,27 @@
       width: 119px;
       height: 150px;
 
+      &--more {
+        border-radius: 4px;
+        width: 332px;
+        margin-bottom: 8px;
+        height: 360px;
+
+        @media screen and (min-width: $tablet) {
+          width: 358px;
+          height: 385px;
+        }
+      }
+
       @media screen and (min-width: $desktop) {
         width: 484px;
         height: 216px;
         margin-bottom: 8px;
+
+        &--more {
+          width: 358px;
+          height: 385px;
+        }
       }
 
       img {
@@ -44,10 +74,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      &--more {
+        padding: 0 8px;
+        margin-bottom: 8px;
+      }
 
       @media screen and (min-width: $desktop) {
         padding: 0 8px;
         margin-bottom: 8px;
+
+        &--more {
+          margin: 0;
+        }
       }
 
       &__text {
@@ -83,6 +121,13 @@
 
       margin-bottom: 12px;
 
+      &--more {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 8px;
+        margin-bottom: 16px;
+      }
+
       @media screen and (min-width: $desktop) {
         flex-direction: row;
         gap: 8px;
@@ -92,6 +137,10 @@
 
         color: $text-color-blue-gray-600;
         line-height: $line-height-xs;
+
+        &--more {
+          justify-content: space-between;
+        }
       }
 
       &__date {
@@ -100,6 +149,14 @@
         font-weight: $font-weight-semi;
         line-height: $line-height-s;
         letter-spacing: $letter-spacing-m;
+
+        &--more {
+          font-weight: $font-weight-regular;
+        }
+      }
+
+      &__distance {
+        @extend %distance-info;
       }
     }
 
@@ -178,6 +235,10 @@
     .sides {
       display: flex;
       justify-content: space-between;
+      &--more {
+        align-items: end;
+      }
+
       @media screen and (min-width: $desktop) {
         align-items: end;
         margin-bottom: 12px;
@@ -224,6 +285,21 @@
             }
           }
         }
+
+        .price {
+          display: flex;
+          align-items: center;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+
+          &__period {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: #6d6d88;
+          }
+        }
       }
 
       &__right {
@@ -238,6 +314,18 @@
           border-radius: 32px;
           border: 1px solid $text-color-blue-500;
           background: $bg-color-tertiary;
+
+          &--more {
+            padding: 8px 24px;
+            border-radius: 8px;
+            background: $bg-color-accent-dark;
+            box-shadow: 0px 4px 16px 0px rgba(36, 36, 44, 0.2);
+            border: none;
+
+            color: $text-color-btn;
+            font-size: $font-size-s;
+            line-height: $line-height-m;
+          }
 
           @media screen and (min-width: $desktop) {
             padding: 8px 24px;

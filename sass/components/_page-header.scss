@@ -26,4 +26,34 @@
   .navigation {
     @extend %navigation;
   }
+
+  .cart{
+    position: relative;
+    padding: 13.5px !important;
+    display: inline-block;
+
+    &__active{
+      background-color: $bg-color-accent-dark;
+      border-radius: 8px;
+    }
+    &__counter{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $bg-color-tertiary;
+      color: $bg-color-secondary;
+      font-family: Source Sans Pro;
+      font-size: $font-size-xxs;
+      font-weight: $font-weight-semi;
+      line-height: $line-height-xxs;
+      text-align: center;
+      border-radius: 50%;
+      height: 24px;
+      width: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(25%) translateY(25%);
+    }
+  }
 }

@@ -252,6 +252,35 @@ svg {
   justify-content: space-between;
   align-items: center;
 }
+.header .cart {
+  position: relative;
+  padding: 13.5px !important;
+  display: inline-block;
+}
+.header .cart__active {
+  background-color: #6f6dff;
+  border-radius: 8px;
+}
+.header .cart__counter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+  color: #24242c;
+  font-family: Source Sans Pro;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(25%) translateY(25%);
+}
+
 .main {
   flex: 1;
   background-color: #f4f5fb;

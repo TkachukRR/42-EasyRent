@@ -1,0 +1,52 @@
+.main {
+  padding-top: 20px;
+  flex: 1;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 40px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    @media screen and (min-width: 1439px) {
+      flex-direction: row;
+      gap: 17px;
+      align-items: flex-start;
+    }
+
+    &--more {
+      &::after {
+        display: block;
+        content: '';
+        height: 50%;
+        width: 150px;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        background: linear-gradient(
+          270deg,
+          rgba(255, 255, 255, 0.83) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0.75;
+        @media screen and (min-width: $tablet) {
+          width: 282px;
+        }
+      }
+    }
+    .content {
+      max-width: 758px;
+      width: 100%;
+    }
+
+    .side {
+      max-width: 548px;
+    }
+  }
+}

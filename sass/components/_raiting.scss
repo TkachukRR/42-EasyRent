@@ -1,0 +1,29 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #6d6d88;
+  meter {
+    background: none;
+    margin-top: -2px;
+    height: 32px;
+    width: 5rem;
+    border-color: transparent;
+
+    &::-webkit-meter-bar,
+    &::-webkit-meter-optimum-value {
+      mask: url('../../images/star.svg');
+      mask-size: 1rem;
+      mask-repeat: repeat-x;
+    }
+
+    &::-webkit-meter-optimum-value {
+      background: #fdc500;
+    }
+
+    &:-moz-meter-optimum::-moz-meter-bar {
+      background: #fdc500;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.more-products,
+.other-products {
+  padding-top: 32px;
+  margin-bottom: 8px;
+  width: 100%;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+
+    .more {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      text-decoration: underline;
+      color: #364ea3;
+      cursor: pointer;
+      z-index: 999;
+    }
+  }
+
+  &__list {
+    padding: 10px 0;
+    display: flex;
+    gap: 10px;
+    @media screen and (max-width: $tablet) {
+      overflow-x: auto;
+    }
+  }
+
+  &__item {
+  }
+}

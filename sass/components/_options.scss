@@ -1,0 +1,58 @@
+.opinions {
+  padding: 8px 0;
+  width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    padding: 16px 24px;
+    flex-basis: 758px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+
+  &__more {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    color: #364ea3;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__item {
+    display: none;
+    padding: 16px 24px;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0px 5px 18px 0px #24242c0f;
+
+    &:nth-child(-n + 3) {
+      display: block;
+    }
+  }
+}
+
+#more:checked ~ .opinions__list .opinions__item {
+  display: block;
+}
+
+#more {
+  display: none;
+}

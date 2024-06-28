@@ -1,0 +1,68 @@
+.gallery {
+  @media screen and (max-width: 839px) {
+    &__side {
+      display: flex;
+      gap: 8px;
+      overflow-y: scroll;
+    }
+    .image {
+      flex-shrink: 0;
+      width: 100%;
+      height: 200px;
+      &__radio {
+        display: none;
+      }
+
+      .img {
+        border-radius: 4px;
+        padding: 0;
+        margin: 0;
+        display: block;
+        object-fit: cover;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: calc(840px)) {
+    display: flex;
+    gap: 4px;
+
+    &__side {
+      display: block;
+      width: 100%;
+      position: relative;
+      margin: -4px 0;
+
+      .image {
+        &__radio {
+          display: none;
+
+          &:checked {
+            + .img {
+              width: 605px;
+              height: calc(100% - 2 * 4px);
+
+              position: absolute;
+              right: 0;
+              top: 0;
+              padding: 0;
+            }
+          }
+        }
+
+        .img {
+          border-radius: 4px;
+          padding: 0;
+          margin: 0;
+          display: block;
+          margin: 4px 0;
+          object-fit: cover;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

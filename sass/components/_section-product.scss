@@ -1,0 +1,18 @@
+.product {
+  &__gallery,
+  &__shop,
+  &__specification,
+  &__description {
+    padding: 8px 0;
+
+    @media screen and (min-width: $tablet) {
+      padding: 8px 24px;
+    }
+  }
+  
+  &__shop,
+  &__description,
+  &__specification {
+    margin-bottom: 24px;
+  }
+}

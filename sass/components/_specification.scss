@@ -1,0 +1,50 @@
+.specification {
+  border-collapse: collapse;
+  width: 100%;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  &__header {
+    color: #fafafa;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    border-radius: 8px 8px 0 0;
+
+    .tab .content {
+      background-color: #49495b;
+    }
+
+    .tab:first-of-type .content {
+      border-top-left-radius: 8px;
+    }
+
+    .tab:last-of-type .content {
+      border-top-right-radius: 8px;
+    }
+  }
+
+  &__body {
+    border-radius: 0 0 8px 8px;
+
+    .tab:first-of-type .content {
+      border-bottom-left-radius: 8px;
+    }
+
+    .tab:last-of-type .content {
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  .content {
+    padding: 12px 16px;
+    border: 1px solid #49495b;
+    text-align: center;
+  }
+}
