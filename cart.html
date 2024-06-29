@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyRent - Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/cart.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="container">
+        <a href="/index.html" class="logo">EasyRent</a>
+        <ul class="navigation">
+          <li class="navigation__item">
+            <a href="#" class="btn cart cart--active">
+              <svg class="icon" height="24" width="24">
+                <use xlink:href="images/icons.svg#icon-cart"></use>
+              </svg>
+              <div class="cart__counter">3</div>
+            </a>
+          </li>
+          <li class="navigation__item"><a href="#" class="btn">zaloguj</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <h1 class="main__title">Produkty w koszyku</h1>
+      </div>
+      <div class="container">
+        <div class="content">
+          <ul class="shop__list">
+            <li class="shop__item shop">
+              <div class="shop__cart-header cart-header">
+                <div class="cart-header__side-left">
+                  <h3 class="shop__name">Orbisfera</h3>
+                  <p class="shop__order">(2)</p>
+                </div>
+                <div class="cart-header__side-right">
+                  <address class="shop__address">
+                    ul. Górska 17/ 4 Warszawa
+                  </address>
+                </div>
+              </div>
+              <div class="shop__cart-subheader cart-subheader">
+                Wypożyczalnia
+              </div>
+              <ul class="product__list">
+                <li class="product__item">
+                  <div class="image">
+                    <img
+                      class="img"
+                      src="./images/product.webp"
+                      alt="product"
+                      width="93"
+                      height="106"
+                    />
+                  </div>
+
+                  <div class="info">
+                    <div class="info__header">
+                      <h3 class="info__title">Rower miejski 78</h3>
+                      <ul class="control__list">
+                        <li class="control__item">
+                          <button type="button">
+                            <svg class="icon" height="12" width="12">
+                              <use
+                                xlink:href="images/icons.svg#icon-product-delete"
+                              ></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="control__item">
+                          <button type="button">
+                            <svg class="icon" height="12" width="12">
+                              <use
+                                xlink:href="images/icons.svg#icon-product-edit"
+                              ></use>
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="info__row row">
+                      Termin wynajmu
+                      <div class="row__value">25 marzec - 27 marzec</div>
+                    </div>
+                    <div class="info__row row">
+                      Ilość
+                      <div class="row__value">M x1</div>
+                    </div>
+                    <div class="info__row row">
+                      Kwota
+                      <div class="row__price">370,00zł</div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="product__item">
+                  <div class="image">
+                    <img
+                      class="img"
+                      src="./images/product.webp"
+                      alt="product"
+                      width="93"
+                      height="106"
+                    />
+                  </div>
+
+                  <div class="info">
+                    <div class="info__header">
+                      <h3 class="info__title">Rower miejski 12</h3>
+                      <ul class="control__list">
+                        <li class="control__item">
+                          <button type="button">
+                            <svg class="icon" height="12" width="12">
+                              <use
+                                xlink:href="images/icons.svg#icon-product-delete"
+                              ></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="control__item">
+                          <button type="button">
+                            <svg class="icon" height="12" width="12">
+                              <use
+                                xlink:href="images/icons.svg#icon-product-edit"
+                              ></use>
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="info__row row">
+                      Termin wynajmu
+                      <div class="row__value">25 marzec - 27 marzec</div>
+                    </div>
+                    <div class="info__row row">
+                      Ilość
+                      <div class="row__value">M x1</div>
+                    </div>
+                    <div class="info__row row">
+                      Kwota
+                      <div class="row__price">370,00zł</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="shop__total total">
+                Całkowity koszt
+                <div class="total__value">740,00zł</div>
+              </div>
+            </li>
+
+            <li class="shop__item shop">
+              <div class="shop__cart-header cart-header">
+                <div class="cart-header__side-left">
+                  <h3 class="shop__name">Caspi</h3>
+                  <p class="shop__order">(1)</p>
+                </div>
+                <div class="cart-header__side-right">
+                  <address class="shop__address">
+                    ul. Młynarska 12/ 1 Warszawa
+                  </address>
+                </div>
+              </div>
+              <div class="shop__cart-subheader cart-subheader">
+                Wypożyczalnia
+              </div>
+              <ul class="product__list">
+                <li class="product__item">
+                  <div class="image">
+                    <img
+                      class="img"
+                      src="./images/product.webp"
+                      alt="product"
+                      width="93"
+                      height="106"
+                    />
+                  </div>
+
+                  <div class="info">
+                    <div class="info__header">
+                      <h3 class="info__title">Rower miejski 12</h3>
+                      <ul class="control__list">
+                        <li class="control__item">
+                          <button type="button">
+                            <svg class="icon" height="12" width="12">
+                              <use
+                                xlink:href="images/icons.svg#icon-product-delete"
+                              ></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="control__item">
+                          <button type="button">
+                            <svg class="icon" height="12" width="12">
+                              <use
+                                xlink:href="images/icons.svg#icon-product-edit"
+                              ></use>
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="info__row row">
+                      Termin wynajmu
+                      <div class="row__value">25 marzec - 27 marzec</div>
+                    </div>
+                    <div class="info__row row">
+                      Ilość
+                      <div class="row__value">M x1</div>
+                    </div>
+                    <div class="info__row row">
+                      Kwota
+                      <div class="row__price">320,00zł</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="shop__total total">
+                Całkowity koszt
+                <div class="total__value">320,00zł</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <aside class="side">
+          <div class="summary">
+            <h3 class="summary__title">Podsumowanie zamówienia</h3>
+            <ul class="summary__shops shop__list">
+              <li class="shop__item shop">
+                <h4 class="shop__name">
+                  Caspi <span class="shop__orders">(1)</span>
+                  <span class="shop__total-price">740,00zł</span>
+                </h4>
+
+                <ul class="product__list">
+                  <li class="product__item">
+                    <div class="product">
+                      Product
+                      <div class="product__detail">Rower miejski 78</div>
+                    </div>
+                  </li>
+                  <li class="product__item">
+                    <div class="product">
+                      Product
+                      <div class="product__detail">Rower miejski 12</div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="shop__item shop">
+                <h4 class="shop__name">
+                  Orbisfera <span class="shop__orders">(2)</span>
+                  <span class="shop__total-price">320,00zł</span>
+                </h4>
+
+                <ul class="product__list">
+                  <li class="product__item">
+                    <div class="product">
+                      Product
+                      <div class="product__detail">Rower miejski</div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <p class="summary__price">
+              Kwota całkowita<span class="summary__price-value">1060,00zł</span>
+            </p>
+            <button type="submit" class="summary__submit">Zarezerwuj</button>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <nav class="container">
+        <ul class="navi">
+          <li class="navi__item">
+            <h3 class="title">Informacje</h3>
+            <ul class="list">
+              <li><a class="link" href="#">Pytania</a></li>
+              <li><a class="link" href="#">Płatności</a></li>
+              <li><a class="link" href="#">Reklamacja</a></li>
+            </ul>
+          </li>
+
+          <li class="navi__item">
+            <h3 class="title">Regulaminy</h3>
+            <ul class="list">
+              <li><a class="link" href="#">Polityka prywatności</a></li>
+              <li><a class="link" href="#">Regulamin</a></li>
+            </ul>
+          </li>
+
+          <li class="navi__item">
+            <h3 class="title">Kontakt</h3>
+            <ul class="list">
+              <li><a class="link" href="#">O nas</a></li>
+              <li><a class="link" href="#">Kontakt</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="/index.html" class="logo">EasyRent</a>
+      </nav>
+    </footer>
+  </body>
+</html>

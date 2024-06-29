@@ -257,7 +257,7 @@ svg {
   padding: 13.5px !important;
   display: inline-block;
 }
-.header .cart__active {
+.header .cart--active {
   background-color: #6f6dff;
   border-radius: 8px;
 }

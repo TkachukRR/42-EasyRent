@@ -27,16 +27,16 @@
     @extend %navigation;
   }
 
-  .cart{
+  .cart {
     position: relative;
     padding: 13.5px !important;
     display: inline-block;
 
-    &__active{
+    &--active {
       background-color: $bg-color-accent-dark;
       border-radius: 8px;
     }
-    &__counter{
+    &__counter {
       position: absolute;
       bottom: 0;
       right: 0;
